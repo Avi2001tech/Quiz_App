@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Jhatpat Quiz</string>
+    <string name="home">home</string>
+    <string name="challenge">challenge</string>
+    <string name="leaderboard">leaderboard</string>
+    <string name="create">create</string>
+    <string name="avtar">Avtar</string>
+    <string name="app_mail_id">Jhatpat_quiz@gmail.com</string>
+    <string name="app_logo">Logo</string>
+    <string name="starred">Starred</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="help_center">Help Center</string>
+    <string name="mail_us">Mail us</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBF3FA"
+    tools:context=".splashScreen">
+
+    <TextView
+        android:id="@+id/AppName"
+        android:layout_width="332dp"
+        android:layout_height="62dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="483dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="50dp"
+        android:fontFamily="@font/app_launch_name"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/Navy"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        tools:ignore="TextContrastCheck" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-3dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="9dp"
+        android:elevation="5dp"
+        android:rotationX="4"
+        android:rotationY="8"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/launch_animation"
+        tools:ignore="ImageContrastCheck,InvalidId" />
+
+</RelativeLayout>
