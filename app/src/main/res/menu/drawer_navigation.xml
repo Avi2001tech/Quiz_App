@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/starred"
-        android:title="@string/starred"
-        android:icon="@drawable/ic_baseline_star_24"
+        android:id="@+id/rate_us"
+        android:title="@string/rate_us"
+        android:icon="@drawable/rate"
         />
 
     <item
-        android:id="@+id/suggestions"
-        android:title="@string/suggestions"
-        android:icon="@drawable/ic_baseline_sticky_note_2_24"
+        android:id="@+id/bookmark"
+        android:title="@string/bookmarks"
+        android:icon="@drawable/bookmark"
+        />
+
+    <item
+        android:id="@+id/feedback"
+        android:title="@string/feedback"
+        android:icon="@drawable/feedback_icon"
         />
 
     <item
         android:id="@+id/help_center"
         android:title="@string/help_center"
-        android:icon="@drawable/ic_baseline_call_24"
+        android:icon="@drawable/call"
         />
 
     <item
         android:id="@+id/mail_us"
         android:title="@string/mail_us"
-        android:icon="@drawable/ic_baseline_email_24"
+        android:icon="@drawable/email"
+        />
+
+    <item
+        android:id="@+id/privacy"
+        android:title="@string/privacy_policy"
+        android:icon="@drawable/privacy"
+        />
+
+    <item
+        android:id="@+id/share"
+        android:title="@string/share_app"
+        android:icon="@drawable/share"
         />
 
 </menu>

@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Jhatpat Quiz</string>
+    <string name="OpenDrawer">Open navigation drawer</string>
+    <string name="CloseDrawer">Close navigation drawer</string>
     <string name="home">home</string>
     <string name="challenge">challenge</string>
     <string name="leaderboard">leaderboard</string>
@@ -11,4 +13,25 @@
     <string name="suggestions">Suggestions</string>
     <string name="help_center">Help Center</string>
     <string name="mail_us">Mail us</string>
+    <string name="attempt_your_favourite_section">Attempt your favourite section :</string>
+    <string name="keep_going_champ">Keep Going Champ,</string>
+    <string name="_5_current_affairs">5) Current Affairs:</string>
+    <string name="picture_of_current_affairs">picture of current affairs</string>
+    <string name="_4_science">4) Science:</string>
+    <string name="info_of_this_week">Info of this Week</string>
+    <string name="_3_culture_and_geography">3) Culture and Geography:</string>
+    <string name="_1_sports">1) Sports:</string>
+    <string name="_2_history">2) History:</string>
+    <string name="image_of_science">Image of science</string>
+    <string name="image_of_science_new">Image of science</string>
+    <string name="historical_image">Historical Image</string>
+    <string name="image_displaying_sports">Image displaying sports</string>
+    <string name="feedback">Feedback</string>
+    <string name="rate_us">Rate_us</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="share_app">Share App</string>
+    <string name="upload_image_if_necessary">Upload image if necessary</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

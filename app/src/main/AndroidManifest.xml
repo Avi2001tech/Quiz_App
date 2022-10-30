@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.integration">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +16,30 @@
         android:theme="@style/Theme.Integration"
         tools:targetApi="31">
         <activity
+            android:name=".selection"
+            android:exported="false" />
+        <activity
+            android:name=".create_SplashScreen"
+            android:exported="false" />
+        <activity
+            android:name=".login_page"
+            android:exported="false" />
+        <activity
+            android:name=".sign_up"
+            android:exported="true" />
+        <activity
+            android:name=".Challenge"
+            android:exported="true" />
+        <activity
+            android:name=".Leaderboard"
+            android:exported="true" />
+        <activity
+            android:name=".create"
+            android:exported="true" />
+        <activity
+            android:name=".profile_page"
+            android:exported="true" />
+        <activity
             android:name=".splashScreen"
             android:exported="true">
             <intent-filter>
@@ -24,9 +50,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

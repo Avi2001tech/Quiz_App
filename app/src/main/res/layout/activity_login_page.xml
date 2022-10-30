@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6e6fa"
+    tools:context=".login_page">
+
+    <LinearLayout
+        android:id="@+id/login_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/login_icon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="-25dp"
+            android:layout_marginBottom="-15dp"
+            android:src="@drawable/sign_up_icon"
+            android:contentDescription="clipart_login" />
+
+        <TextView
+            android:layout_marginTop="-20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcome_message"
+            android:text="WELCOME BACK,CHAMP!!"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bungee"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signin_message"
+            android:text="Sign in to continue,"
+            android:layout_marginTop="-20dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/antic"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                style="@style/Widget.Design.TextInputLayout">
+
+                <EditText
+                    android:id="@+id/email_login"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="18sp"
+                    android:hint="Email id"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="50"
+                    android:textColor="#000000" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:endIconMode="password_toggle"
+                app:endIconContentDescription="Make sure to create strong password"
+                style="@style/Widget.Design.TextInputLayout">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/password"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="18sp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLength="20"
+                    android:textColor="#000000"
+                    tools:ignore="TouchTargetSizeCheck"
+                    app:endIconMode="password_toggle" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@android:color/transparent"
+                android:layout_margin="5dp"
+                android:text="Forgot password?"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ffdf00"
+                android:background="@drawable/round"
+                android:layout_marginTop="7dp"
+                android:elevation="0dp"
+                android:textSize="18sp"
+                android:text="Let's Go"
+                android:fontFamily="@font/bungee"
+                android:textColor="@color/black" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sign_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:backgroundTint="#DBF3FA"
+                android:layout_marginTop="0dp"
+                android:textSize="15sp"
+                android:text="New user ? Sign up"
+                android:textColor="@color/black" />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

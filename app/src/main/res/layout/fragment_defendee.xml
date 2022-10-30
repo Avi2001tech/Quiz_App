@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="25dp"
+    tools:context=".defendee">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp"
+        android:backgroundTint="#f5fcff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You have been challenge by :"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/headline"
+                android:textColor="#000000"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/challenger_name"
+                    android:text="--> User :"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000000">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/challenger_id"
+                    android:text="rocking_3021"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/headline"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000000">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/challenger_rank"
+                    android:text="-->leaderboard rank :"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000000">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/challenger_rank_id"
+                    android:text="48"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/headline"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000000">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_details"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/round"
+                android:backgroundTint="#efe"
+                android:elevation="10dp"
+                android:text="Check Details about quiz"
+                android:textSize="18sp"
+                android:fontFamily="@font/headline"
+                android:textStyle="bold"
+                android:textAllCaps="false"/>
+
+            <LinearLayout
+                android:id="@+id/quiz_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Difficulty level :"
+                        android:textSize="22sp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Medium "
+                        android:fontFamily="@font/antic"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Age group :"
+                        android:textSize="22sp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 18+ "
+                        android:fontFamily="@font/antic"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category :"
+                        android:textSize="22sp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Science "
+                        android:fontFamily="@font/antic"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Range :"
+                        android:textSize="22sp"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 3-4 pm "
+                        android:fontFamily="@font/antic"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_marginStart="10dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</ScrollView>

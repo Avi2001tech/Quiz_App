@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "709026427582",
+    "project_id": "jhatpat-quiz",
+    "storage_bucket": "jhatpat-quiz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709026427582:android:13461e62050ad726c424ef",
+        "android_client_info": {
+          "package_name": "com.example.integration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "709026427582-l34r5euqb0ia8bmp0kukf1lnt01up1s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_3rpHi7b3HoAVGWIeasI5_MV9Rqxd4rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709026427582-l34r5euqb0ia8bmp0kukf1lnt01up1s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

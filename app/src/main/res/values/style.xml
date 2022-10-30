@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="toolbar_head" parent="@style/Base.TextAppearance.AppCompat.Title">
-        <item name="android:textSize">29dp</item>
+        <item name="android:textSize">18dp</item>
     </style>
 </resources>
