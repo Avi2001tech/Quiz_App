@@ -1,5 +1,6 @@
 package com.example.integration;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,9 +22,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.ByteArrayOutputStream;
 
@@ -34,7 +40,7 @@ public class profile_page extends AppCompatActivity {
     Button update;
     LinearLayout display;
    // TextInputEditText display_name,display_email,display_phone_no,future_purpose_1,future_purpose_2,future_purpose_3;
-    TextView user_name,user_small_name;
+    TextView user_name,user_description;
     EditText display_n,display_email,display_phone_no,status;
     FloatingActionButton fab;
     CircleImageView imgUser;
@@ -42,6 +48,7 @@ public class profile_page extends AppCompatActivity {
     TextView dialog_text;
 
     FirebaseAuth mAuth;
+    FirebaseFirestore dbroot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +60,7 @@ public class profile_page extends AppCompatActivity {
         display = findViewById(R.id.display);
 
         user_name = findViewById(R.id.email_login);
-        user_small_name = findViewById(R.id.user_name_small);
+        user_description = findViewById(R.id.user_name_small);
         display_n = findViewById(R.id.display_name);
         display_email = findViewById(R.id.display_email);
         display_phone_no = findViewById(R.id.display_phone_no);
@@ -68,6 +75,29 @@ public class profile_page extends AppCompatActivity {
         dialog_text.setText("Signning out ....");
 
         mAuth = FirebaseAuth.getInstance();
+
+        dbroot = FirebaseFirestore.getInstance();
+        String userId = mAuth.getCurrentUser().getUid();
+//        userId = "raman61";
+        DocumentReference document = dbroot.collection("users").document(userId);
+        document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            user_name.setText(documentSnapshot.getString("fullName") + " " + documentSnapshot.getString("username"));
+                            user_description.setText(documentSnapshot.getString("email"));
+
+                        } else {
+                            Toast.makeText(profile_page.this, "User not Found !!", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(profile_page.this, "Failed to fetch datta", Toast.LENGTH_LONG).show();
+                    }
+                });
 
 
    //     future_purpose_1 = findViewById(R.id.future_purpose_1);
@@ -126,7 +156,7 @@ public class profile_page extends AppCompatActivity {
 
                     display_n.setText(s);
                     user_name.setText(s);
-                    user_small_name.setText(display_status);
+                    user_description.setText(display_status);
                     display_email.setText(display_e);
                     display_phone_no.setText(display_p);
                     status.setText(display_status);
@@ -144,7 +174,7 @@ public class profile_page extends AppCompatActivity {
         String val4 = getShared.getString("status","Your status will be displayed here");
         display_n.setText(val);
         user_name.setText(val);
-        user_small_name.setText(val4);
+        user_description.setText(val4);
         display_email.setText(val2);
         display_phone_no.setText(val3);
         status.setText(val4);

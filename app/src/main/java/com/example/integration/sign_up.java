@@ -57,6 +57,8 @@ public class sign_up extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
+
+
                            // sign in to home
         button_home = findViewById(R.id.save_details);
         button_home.setOnClickListener(new View.OnClickListener() {
@@ -175,7 +177,7 @@ public class sign_up extends AppCompatActivity {
                             userMap.put("email", emailInp);
                             userMap.put("phone", phoneInp);
 
-                            db.collection("users").document(usernameInp).set(userMap);
+                            db.collection("users").document(mAuth.getCurrentUser().getUid()).set(userMap);
 
                             // Sign in success, update UI with the signed-in user's information
                             progressDialog.dismiss();
