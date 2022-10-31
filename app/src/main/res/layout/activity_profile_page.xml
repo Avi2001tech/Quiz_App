@@ -188,7 +188,8 @@
             android:layout_marginTop="-2dp"
             android:layout_marginBottom="5dp"
             android:padding="20dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/display_name"
@@ -200,34 +201,30 @@
                 android:minHeight="48dp"
                 android:paddingStart="15dp"/>
 
-
-
-
-
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/display_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email-id"
                 android:layout_marginBottom="10dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/display_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/emails"
-                    android:text="alanafalana@gmail.com"
+                    android:text="sample_email@gmail.com"
                     android:background="@android:color/transparent"
                     android:drawablePadding="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/display_phone_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone No."
                 android:layout_marginBottom="10dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/display_phone_no"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/still_call"
@@ -237,17 +234,17 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/future_purpose_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="future_purpose_1"
+                android:hint="Status"
                 android:layout_marginBottom="10dp">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
+                    android:id="@+id/status"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/user"
-                    android:text="aa dekhe jaara"
+                    android:text="How its goinggggg"
                     android:background="@android:color/transparent"
                     android:drawablePadding="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -286,17 +283,27 @@
             </com.google.android.material.textfield.TextInputLayout>
 
 
-            <LinearLayout
-                android:id="@+id/button_panel"
-                android:layout_width="match_parent"
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="2"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:weightSum="2"
-                android:padding="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
-
-
+                android:layout_weight="1"
+                android:gravity="center">
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/update"
@@ -311,6 +318,15 @@
                     android:layout_marginBottom="5dp"
                     />
 
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sign_out"
                     android:layout_marginTop="5dp"
@@ -322,8 +338,11 @@
                     android:backgroundTint="#f5fcff"
                     android:background="@drawable/roundbutton"
                     android:textColor="@color/black"
-                     />
-            </LinearLayout>
+                    />
+
+
+            </RelativeLayout>
+
 
         </LinearLayout>
 
