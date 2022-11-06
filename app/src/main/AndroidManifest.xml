@@ -16,6 +16,13 @@
         android:theme="@style/Theme.Integration"
         tools:targetApi="31">
         <activity
+            android:name=".FinsihQuiz"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".before_quiz_start"
             android:exported="false" />
         <activity

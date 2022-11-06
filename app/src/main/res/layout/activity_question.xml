@@ -52,7 +52,9 @@
 
                 />
 
+
         </LinearLayout>
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -63,6 +65,7 @@
             app:cardElevation="10dp">
 
             <TextView
+                android:id="@+id/qText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -74,6 +77,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardA"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             app:cardCornerRadius="36dp"
@@ -83,6 +87,7 @@
             app:cardElevation="10dp">
 
             <TextView
+                android:id="@+id/optiona"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -97,6 +102,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardB"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             app:cardCornerRadius="36dp"
@@ -106,6 +112,7 @@
             app:cardElevation="10dp">
 
             <TextView
+                android:id="@+id/optionb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -120,6 +127,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardC"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             app:cardCornerRadius="36dp"
@@ -129,6 +137,7 @@
             app:cardElevation="10dp">
 
             <TextView
+                android:id="@+id/optionc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -143,6 +152,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardD"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             app:cardCornerRadius="36dp"
@@ -152,6 +162,7 @@
             app:cardElevation="10dp">
 
             <TextView
+                android:id="@+id/optiond"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -166,16 +177,18 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/next_question"
+
+            android:id="@+id/nextBtn"
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Submit"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
+            android:text="Next"
+
             android:background="@drawable/roundbutton"
             android:backgroundTint="#FBF4e2"
             android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
 
             />
 
