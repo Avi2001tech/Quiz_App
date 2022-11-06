@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,6 +58,7 @@ public class profile_page extends AppCompatActivity {
         sign_out = findViewById(R.id.sign_out);
         update = findViewById(R.id.update);
 
+        ImageView back_button =findViewById(R.id.back_button);
         display = findViewById(R.id.display);
 
         user_name = findViewById(R.id.email_login);
@@ -113,6 +115,15 @@ public class profile_page extends AppCompatActivity {
  //       future_purpose_1.setText(display_f1);
  //       future_purpose_2.setText(display_f2);
  //       future_purpose_3.setText(display_f3);
+
+
+        //back button
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profile_page.this.finish();
+            }
+        });
 
                           // sign out functionality
         sign_out=findViewById(R.id.sign_out);

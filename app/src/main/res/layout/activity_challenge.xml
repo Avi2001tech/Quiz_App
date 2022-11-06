@@ -6,6 +6,20 @@
     android:orientation="vertical"
     tools:context=".Challenge">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#efe">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_button" />
+
+    </RelativeLayout>
+
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab"
         android:layout_width="match_parent"

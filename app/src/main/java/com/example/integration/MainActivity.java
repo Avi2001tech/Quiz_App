@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer_lay;
     NavigationView nav_view;
     BottomNavigationView bottom_bar;
+    ImageView sport,history,culture,gk,science;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,71 @@ public class MainActivity extends AppCompatActivity {
         drawer_lay = findViewById(R.id.drawer_lay);
         nav_view = findViewById(R.id.nav_view);
         bottom_bar = findViewById(R.id.bottom_bar);
+        sport = findViewById(R.id.sports_pic);
+        history = findViewById(R.id.history_pic);
+        culture=findViewById(R.id.culture_pic);
+        gk=findViewById(R.id.current_affairs_pic);
+        science=findViewById(R.id.science_pic);
+
+
+        // click images to move to activity
+        sport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s ="SPORTS";
+                Intent i = new Intent(MainActivity.this,before_quiz_start.class);
+                i.putExtra("EXTRA_DATA",s );
+                startActivity(i);
+
+            }
+        });
+
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s ="HISTORY";
+                Intent i = new Intent(MainActivity.this,before_quiz_start.class);
+                i.putExtra("EXTRA_DATA",s );
+                startActivity(i);
+
+            }
+        });
+
+        culture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s ="CULTURE & GEOGRAPHY";
+                Intent i = new Intent(MainActivity.this,before_quiz_start.class);
+                i.putExtra("EXTRA_DATA",s );
+                startActivity(i);
+
+            }
+        });
+
+        science.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s ="SCIENCE";
+                Intent i = new Intent(MainActivity.this,before_quiz_start.class);
+                i.putExtra("EXTRA_DATA",s );
+                startActivity(i);
+
+            }
+        });
+
+        gk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s ="CURRENT AFFAIRS";
+                Intent i = new Intent(MainActivity.this,before_quiz_start.class);
+                i.putExtra("EXTRA_DATA",s );
+                startActivity(i);
+
+            }
+        });
+
+
+
 
 
                                                          // For toolbar setting
@@ -64,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
         slideModels.add(new SlideModel("https://i.imgur.com/VA2LH2i.jpeg","1989 - 2020, alittle effort which leads to revolution", ScaleTypes.FIT));
 
         imageSlider.setImageList(slideModels,ScaleTypes.FIT);
+
 
 
                            //for Bottom navigation
@@ -92,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
         });
         bottom_bar.setSelectedItemId(R.id.nav_home);
     }
+
 
 
     @Override
