@@ -83,21 +83,6 @@ public class QuestionActivity extends AppCompatActivity {
             }
         });
 
-//        countDownTimer = new CountDownTimer(20000,1000) {
-//            @Override
-//            public void onTick(long l) {
-////                timerValue = timerValue -1;
-//            }
-//
-//            @Override
-//            public void onFinish() {
-//                Intent i = new Intent(QuestionActivity.this, SplashActivity.class);
-//                startActivity(i);
-//            }
-//        }.start();
-
-
-
 
     }
 
@@ -122,6 +107,7 @@ public class QuestionActivity extends AppCompatActivity {
         cardOD =findViewById(R.id.cardD);
 
         scoreUpdate = findViewById(R.id.score_update);
-//        AppCompatButton endQuiz = findViewById(R.id.end_quiz);
     }
+
+
 }
