@@ -14,6 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.rpc.RequestInfo;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,10 +28,13 @@ public class QuestionActivity extends AppCompatActivity {
     ModelClass modelclass;
     int index=0;
     int score=0;
+    int correctCount=0;
+    int wrongCount=0;
     TextView qText, optiona, optionb, optionc, optiond;
     CardView cardOA,cardOB, cardOC, cardOD;
     ArrayList<ModelClass> listOfQ;
     TextView scoreUpdate;
+    AppCompatButton nextBtn;
 
 
     @Override
@@ -40,45 +45,50 @@ public class QuestionActivity extends AppCompatActivity {
         Hooks();
 
         listOfQ =  new ArrayList<>();
-        listOfQ.add(new ModelClass("Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("2222Approximately what fraction of world's populationlives in india","222","333","444","555","222"));
-        listOfQ.add(new ModelClass("3333Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("4444Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("5555Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("6666Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("7777Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("8888Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("9999Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-        listOfQ.add(new ModelClass("10101010Approximately what fraction of world's populationlives in india","1/6","1/10","1/3","1/2","1/6"));
-
+        listOfQ.add(new ModelClass("Which Country won the inaugural T20 Cricket World Cup ?","West Indies","England","India","Pakistan","India"));
+        listOfQ.add(new ModelClass("Which among batsman have the most International runs ?","Sir Don Bradman","Sir Vivian Richards","Sunil Gavaskar","Sachin Tendulkar","Sachin Tendulkar"));
+        listOfQ.add(new ModelClass("Famous Tennis Player Roger Federer plays for which among the following nations ?","Britain","Switzerland","Portugal","Brazil","Switzerland"));
+        listOfQ.add(new ModelClass("Who was awarded the Man of the match in the Cricket world cup 2011 final ?","MS Dhoni","Gautam Gambhir","Yuvraj Singh","Zaheer Khan","MS Dhoni"));
+        listOfQ.add(new ModelClass("In which field Neeraj Chopra Won the Olympic Gold Medal ?","Swimming","javelin throw","Badminton","Wrestling","javelin throw "));
+        listOfQ.add(new ModelClass("Which sport is described as \'the beautiful game\' ?","Cricket","Bull fighting","Badminton","football","football"));
+        listOfQ.add(new ModelClass("Which country won the first ever football world cup ?","Argentina","Portugal","Uruguay","Spain","Uruguay"));
+        listOfQ.add(new ModelClass("How many regulation strokes are there in Swimming ?","4","3","2","5","4"));
+        listOfQ.add(new ModelClass("Term Chinaman is related to which sport ?","Football","Hockey","Golf","Cricket","Cricket"));
+        listOfQ.add(new ModelClass("With which game does Davies Cup is associated ?","Hockey","Table Tennis","Lawn Tennis","Polo","Lawn Tennis"));
 
 
 
         allQuestionsList = listOfQ;
         modelclass = listOfQ.get(index);
 
+        nextBtn.setClickable(false);
+
         setAllData();
 
-        findViewById(R.id.nextBtn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                index++;
-                scoreUpdate.setText((index+1)+"/"+"10");
-                allQuestionsList = listOfQ;
-                modelclass = listOfQ.get(index);
-                setAllData();
-                if(index+1 == 10){
-                    findViewById(R.id.nextBtn).setVisibility(View.GONE);
-                }
-
-            }
-        });
+//        findViewById(R.id.nextBtn).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                index++;
+//                scoreUpdate.setText((index+1)+"/"+"10");
+////                allQuestionsList = listOfQ;
+//                modelclass = listOfQ.get(index);
+//                setAllData();
+//                if(index+1 == 10){
+//                    findViewById(R.id.nextBtn).setVisibility(View.GONE);
+//                }
+//
+////                enableButton();
+//
+//            }
+//        });
 
         findViewById(R.id.end_quiz).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(QuestionActivity.this, FinsihQuiz.class);
+                i.putExtra("correct",correctCount);
+                i.putExtra("wrong",wrongCount);
                 startActivity(i);
             }
         });
@@ -92,6 +102,7 @@ public class QuestionActivity extends AppCompatActivity {
         optionb.setText(modelclass.getoB());
         optionc.setText(modelclass.getoC());
         optiond.setText(modelclass.getoD());
+        resetColor();
     }
 
     private void Hooks() {
@@ -106,8 +117,193 @@ public class QuestionActivity extends AppCompatActivity {
         cardOC =findViewById(R.id.cardC);
         cardOD =findViewById(R.id.cardD);
 
+        nextBtn = findViewById(R.id.nextBtn);
+//        endQuiz = findViewById(R.id.end_quiz);
         scoreUpdate = findViewById(R.id.score_update);
     }
 
+    public void Correct(CardView cardview){
+        correctCount++;
+        cardview.setCardBackgroundColor(getResources().getColor(R.color.PaleGreen));
 
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enableButton();
+                nextBtn.setClickable(false);
+                index++;
+                scoreUpdate.setText((index+1)+"/"+"10");
+                modelclass = listOfQ.get(index);
+                setAllData();
+                if(index+1 == 10){
+                    findViewById(R.id.nextBtn).setVisibility(View.GONE);
+                }
+//                resetColor();
+            }
+        });
+//        nextBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                index++;
+//                correctCount++;
+//                scoreUpdate.setText((index+1)+"/"+"10");
+////                allQuestionsList = listOfQ;
+//                modelclass = listOfQ.get(index);
+//                setAllData();
+//                resetColor();
+//                if(index+1 == 10){
+//                    findViewById(R.id.nextBtn).setVisibility(View.GONE);
+//                }
+//
+//
+//
+//
+////                index++;
+////                correctCount++;
+////                modelclass=listOfQ.get(index);
+////                setAllData();
+////                resetColor();
+//            }
+//        });
+
+
+    }
+
+    public void Wrong(CardView cardview){
+        wrongCount++;
+        cardview.setCardBackgroundColor(getResources().getColor(R.color.Red));
+
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enableButton();
+                nextBtn.setClickable(false);
+
+                index++;
+                scoreUpdate.setText((index+1)+"/"+"10");
+                modelclass = listOfQ.get(index);
+                setAllData();
+                if(index+1 == 10){
+                    findViewById(R.id.nextBtn).setVisibility(View.GONE);
+                }
+//                resetColor();
+            }
+        });
+
+//        nextBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                wrongCount++;
+//                if(index < 9){
+//                    index++;
+//                    modelclass=listOfQ.get(index);
+//                    setAllData();
+//                    resetColor();
+//                } else{
+//                    GameWon();
+//                }
+//            }
+//        });
+
+
+    }
+
+//    private void GameWon(){
+//        Intent i = new Intent(QuestionActivity.this, FinsihQuiz.class);
+//        startActivity(i);
+//    }
+
+    public void enableButton(){
+        cardOA.setClickable(true );
+        cardOB.setClickable(true );
+        cardOC.setClickable(true );
+        cardOD.setClickable(true );
+    }
+    public void disableButton(){
+        cardOA.setClickable(false );
+        cardOB.setClickable(false );
+        cardOC.setClickable(false );
+        cardOD.setClickable(false );
+    }
+
+    public void resetColor(){
+        cardOA.setCardBackgroundColor(getResources().getColor(R.color.white));
+        cardOB.setCardBackgroundColor(getResources().getColor(R.color.white));
+        cardOC.setCardBackgroundColor(getResources().getColor(R.color.white));
+        cardOD.setCardBackgroundColor(getResources().getColor(R.color.white));
+    }
+
+    public void OptionAClick(View view) {
+        nextBtn.setClickable(true);
+        disableButton();
+        if(modelclass.getoA().equals(modelclass.getAns())){
+            Correct(cardOA);
+//            cardOA.setCardBackgroundColor(getResources().getColor(R.color.LawnGreen));
+//            if(index < 9){
+//                Correct(cardOA);
+//            }
+//            else{
+//                GameWon();
+//            }
+        }
+        else{
+            Wrong(cardOA);
+        }
+    }
+
+    public void OptionBClick(View view) {
+        nextBtn.setClickable(true);
+        disableButton();
+        if(modelclass.getoB().equals(modelclass.getAns())){
+            Correct(cardOB);
+//            cardOB.setCardBackgroundColor(getResources().getColor(R.color.LawnGreen));
+//            if(index < 9){
+//                Correct(cardOB);
+//            }
+//            else{
+//                GameWon();
+//            }
+        }
+        else{
+            Wrong(cardOB);
+        }
+    }
+
+    public void OptionCClick(View view) {
+        nextBtn.setClickable(true);
+        disableButton();
+        if(modelclass.getoC().equals(modelclass.getAns())){
+            Correct(cardOC);
+//            cardOC.setCardBackgroundColor(getResources().getColor(R.color.LawnGreen));
+//            if(index < 9){
+//                Correct(cardOC);
+//            }
+//            else{
+//                GameWon();
+//            }
+        }
+        else{
+            Wrong(cardOC);
+        }
+    }
+
+    public void OptionDClick(View view) {
+        nextBtn.setClickable(true);
+        disableButton();
+        if(modelclass.getoD().equals(modelclass.getAns())){
+            Correct(cardOD);
+//            cardOD.setCardBackgroundColor(getResources().getColor(R.color.LawnGreen));
+//            if(index < 9){
+//                Correct(cardOD);
+//            }
+//            else{
+//                GameWon();
+//            }
+        }
+        else{
+            Wrong(cardOD);
+        }
+
+    }
 }
