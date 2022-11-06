@@ -80,10 +80,11 @@
             android:id="@+id/cardA"
             android:layout_width="match_parent"
             android:layout_height="40sp"
-            app:cardCornerRadius="36dp"
             android:layout_margin="20dp"
+            android:background="#A8B150"
+            android:onClick="OptionAClick"
             android:paddingStart="10dp"
-            android:backgroundTint="#FBFAF5"
+            app:cardCornerRadius="36dp"
             app:cardElevation="10dp">
 
             <TextView
@@ -91,11 +92,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="Option 1"
                 android:layout_marginStart="5dp"
-                android:textSize="18sp"
-                android:textColor="#000000"
                 android:drawablePadding="20dp"
+                android:text="Option 1"
+                android:textColor="#000000"
+                android:textSize="18sp"
                 app:drawableStartCompat="@drawable/one" />
 
 
@@ -103,12 +104,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardB"
+            android:onClick="OptionBClick"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             app:cardCornerRadius="36dp"
             android:layout_margin="20dp"
             android:paddingStart="10dp"
-            android:backgroundTint="#FBFAF5"
             app:cardElevation="10dp">
 
             <TextView
@@ -128,12 +129,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardC"
+            android:onClick="OptionCClick"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             app:cardCornerRadius="36dp"
             android:layout_margin="20dp"
             android:paddingStart="10dp"
-            android:backgroundTint="#FBFAF5"
             app:cardElevation="10dp">
 
             <TextView
@@ -153,12 +154,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardD"
+            android:onClick="OptionDClick"
             android:layout_width="match_parent"
             android:layout_height="40sp"
             app:cardCornerRadius="36dp"
             android:layout_margin="20dp"
             android:paddingStart="10dp"
-            android:backgroundTint="#FBFAF5"
             app:cardElevation="10dp">
 
             <TextView
