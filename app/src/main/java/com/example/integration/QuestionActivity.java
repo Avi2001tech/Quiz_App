@@ -13,6 +13,7 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.rpc.RequestInfo;
 
@@ -49,7 +50,7 @@ public class QuestionActivity extends AppCompatActivity {
         listOfQ.add(new ModelClass("Which among batsman have the most International runs ?","Sir Don Bradman","Sir Vivian Richards","Sunil Gavaskar","Sachin Tendulkar","Sachin Tendulkar"));
         listOfQ.add(new ModelClass("Famous Tennis Player Roger Federer plays for which among the following nations ?","Britain","Switzerland","Portugal","Brazil","Switzerland"));
         listOfQ.add(new ModelClass("Who was awarded the Man of the match in the Cricket world cup 2011 final ?","MS Dhoni","Gautam Gambhir","Yuvraj Singh","Zaheer Khan","MS Dhoni"));
-        listOfQ.add(new ModelClass("In which field Neeraj Chopra Won the Olympic Gold Medal ?","Swimming","javelin throw","Badminton","Wrestling","javelin throw "));
+        listOfQ.add(new ModelClass("In which field Neeraj Chopra Won the Olympic Gold Medal ?","Swimming","javelin throw","Badminton","Wrestling","javelin throw"));
         listOfQ.add(new ModelClass("Which sport is described as \'the beautiful game\' ?","Cricket","Bull fighting","Badminton","football","football"));
         listOfQ.add(new ModelClass("Which country won the first ever football world cup ?","Argentina","Portugal","Uruguay","Spain","Uruguay"));
         listOfQ.add(new ModelClass("How many regulation strokes are there in Swimming ?","4","3","2","5","4"));
@@ -61,7 +62,30 @@ public class QuestionActivity extends AppCompatActivity {
         allQuestionsList = listOfQ;
         modelclass = listOfQ.get(index);
 
-        nextBtn.setClickable(false);
+
+        /*nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(QuestionActivity.this, "You can't skip questions", Toast.LENGTH_SHORT).show();
+                nextBtn.setClickable(false);
+            }
+        });*/
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                enableButton();
+                // nextBtn.setClickable(false);
+                index++;
+                scoreUpdate.setText((index+1)+"/"+"10");
+                modelclass = listOfQ.get(index);
+                setAllData();
+                if(index+1 == 10){
+                    findViewById(R.id.nextBtn).setVisibility(View.GONE);
+                }
+            }
+        });
+
+
 
         setAllData();
 
@@ -129,8 +153,9 @@ public class QuestionActivity extends AppCompatActivity {
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+               // Toast.makeText(QuestionActivity.this, "You can't skip the questions", Toast.LENGTH_SHORT).show();
                 enableButton();
-                nextBtn.setClickable(false);
+               // nextBtn.setClickable(false);
                 index++;
                 scoreUpdate.setText((index+1)+"/"+"10");
                 modelclass = listOfQ.get(index);
@@ -178,7 +203,7 @@ public class QuestionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 enableButton();
-                nextBtn.setClickable(false);
+               // nextBtn.setClickable(false);
 
                 index++;
                 scoreUpdate.setText((index+1)+"/"+"10");

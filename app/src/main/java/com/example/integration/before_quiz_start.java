@@ -50,8 +50,18 @@ public class before_quiz_start extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(before_quiz_start.this,QuestionActivity.class);
-                startActivity(i);
+                if ((spinner_1.getSelectedItemPosition() <= 0)){
+                    Toast.makeText(before_quiz_start.this, "Topic can't be empty", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(before_quiz_start.this, "", Toast.LENGTH_SHORT).show();
+                }
+                else if((spinner_2.getSelectedItemPosition()<=0)){
+                    Toast.makeText(before_quiz_start.this, "Select age group", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Intent i = new Intent(before_quiz_start.this,QuestionActivity.class);
+                    startActivity(i);
+                }
+
             }
         });
 

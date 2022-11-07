@@ -20,7 +20,7 @@ public class FinsihQuiz extends AppCompatActivity {
         wrong = getIntent().getIntExtra("wrong",0);
         resultText = findViewById(R.id.resultText);
 
-        resultText.setText(correct+"/"+(correct+wrong));
+        resultText.setText(correct + "/"+ "10");
 
 
     }
