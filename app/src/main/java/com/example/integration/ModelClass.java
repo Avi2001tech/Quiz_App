@@ -8,6 +8,10 @@ public class ModelClass {
     String oD;
     String ans;
 
+    public ModelClass(){
+
+    }
+
     public ModelClass(String question, String oA, String oB, String oC, String oD, String ans) {
         Question = question;
         this.oA = oA;
