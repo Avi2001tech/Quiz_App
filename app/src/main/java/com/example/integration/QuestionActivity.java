@@ -8,6 +8,7 @@ import androidx.cardview.widget.CardView;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -15,10 +16,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.rpc.RequestInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class QuestionActivity extends AppCompatActivity {
 
@@ -34,8 +37,10 @@ public class QuestionActivity extends AppCompatActivity {
     TextView qText, optiona, optionb, optionc, optiond;
     CardView cardOA,cardOB, cardOC, cardOD;
     ArrayList<ModelClass> listOfQ;
-    TextView scoreUpdate;
+    TextView scoreUpdate,countTimer;
     AppCompatButton nextBtn;
+    FloatingActionButton book_mark;
+    int flag_book_mark =0;
 
 
     @Override
@@ -57,8 +62,6 @@ public class QuestionActivity extends AppCompatActivity {
         listOfQ.add(new ModelClass("Term Chinaman is related to which sport ?","Football","Hockey","Golf","Cricket","Cricket"));
         listOfQ.add(new ModelClass("With which game does Davies Cup is associated ?","Hockey","Table Tennis","Lawn Tennis","Polo","Lawn Tennis"));
 
-
-
         allQuestionsList = listOfQ;
         modelclass = listOfQ.get(index);
 
@@ -70,9 +73,13 @@ public class QuestionActivity extends AppCompatActivity {
                 nextBtn.setClickable(false);
             }
         });*/
+
+                                 // next button coded here
         nextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                book_mark.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
+                flag_book_mark =0;
                 enableButton();
                 // nextBtn.setClickable(false);
                 index++;
@@ -85,9 +92,8 @@ public class QuestionActivity extends AppCompatActivity {
             }
         });
 
-
-
         setAllData();
+        startTimer();
 
 //        findViewById(R.id.nextBtn).setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -106,7 +112,7 @@ public class QuestionActivity extends AppCompatActivity {
 //
 //            }
 //        });
-
+                           //  Submit button coded here
         findViewById(R.id.end_quiz).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -117,9 +123,55 @@ public class QuestionActivity extends AppCompatActivity {
             }
         });
 
+        book_mark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(flag_book_mark == 0){
+                    book_mark.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.Red)));
+                    flag_book_mark =1;
+                }
+                else{
+                    book_mark.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
+                    flag_book_mark =0;
+                }
+                //book_mark.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.Red)));
+            }
+        });
 
     }
 
+
+                         //Timer code done here
+    private void startTimer(){
+        long totalTime = 2*60*1000 + 1000;
+        CountDownTimer timer = new CountDownTimer(totalTime,1000) {
+            @Override
+            public void onTick(long remainingTime) {
+                long timeleft =remainingTime;
+                String time = String.format("%02d:%02d min", TimeUnit.MILLISECONDS.toMinutes(remainingTime),
+                        TimeUnit.MILLISECONDS.toSeconds(remainingTime)
+                                - TimeUnit.MINUTES.toSeconds((TimeUnit.MILLISECONDS.toMinutes(remainingTime))));
+
+                countTimer.setText(time);
+
+            }
+
+            @Override
+            public void onFinish() {
+                Intent i = new Intent(QuestionActivity.this, FinsihQuiz.class);
+                i.putExtra("correct",correctCount);
+                i.putExtra("wrong",wrongCount);
+                startActivity(i);
+
+            }
+        };
+
+        timer.start();
+
+
+    }
+
+                            // All questions and options data are set here
     private void setAllData() {
         qText.setText(modelclass.getQuestion());
         optiona.setText(modelclass.getoA());
@@ -129,6 +181,7 @@ public class QuestionActivity extends AppCompatActivity {
         resetColor();
     }
 
+                           // All findview by id here
     private void Hooks() {
         qText = findViewById(R.id.qText);
         optiona =findViewById(R.id.optiona);
@@ -144,8 +197,11 @@ public class QuestionActivity extends AppCompatActivity {
         nextBtn = findViewById(R.id.nextBtn);
 //        endQuiz = findViewById(R.id.end_quiz);
         scoreUpdate = findViewById(R.id.score_update);
+        countTimer = findViewById(R.id.countTimer);
+        book_mark = findViewById(R.id.book_mark);
     }
 
+                            //Correct cardview code here
     public void Correct(CardView cardview){
         correctCount++;
         cardview.setCardBackgroundColor(getResources().getColor(R.color.PaleGreen));
@@ -195,6 +251,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     }
 
+                           // wrong cardview here
     public void Wrong(CardView cardview){
         wrongCount++;
         cardview.setCardBackgroundColor(getResources().getColor(R.color.Red));
@@ -233,25 +290,25 @@ public class QuestionActivity extends AppCompatActivity {
 
 
     }
-
 //    private void GameWon(){
 //        Intent i = new Intent(QuestionActivity.this, FinsihQuiz.class);
 //        startActivity(i);
 //    }
-
+              // Enable button coded here
     public void enableButton(){
         cardOA.setClickable(true );
         cardOB.setClickable(true );
         cardOC.setClickable(true );
         cardOD.setClickable(true );
     }
+              // disable button coded here
     public void disableButton(){
         cardOA.setClickable(false );
         cardOB.setClickable(false );
         cardOC.setClickable(false );
         cardOD.setClickable(false );
     }
-
+              // Colour change on coding here
     public void resetColor(){
         cardOA.setCardBackgroundColor(getResources().getColor(R.color.white));
         cardOB.setCardBackgroundColor(getResources().getColor(R.color.white));
@@ -259,6 +316,8 @@ public class QuestionActivity extends AppCompatActivity {
         cardOD.setCardBackgroundColor(getResources().getColor(R.color.white));
     }
 
+
+                        // Alloptions coded here
     public void OptionAClick(View view) {
         nextBtn.setClickable(true);
         disableButton();

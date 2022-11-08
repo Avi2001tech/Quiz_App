@@ -39,7 +39,7 @@
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
-                android:layout_width="48dp"
+                android:layout_width="40dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="-20dp"
@@ -47,6 +47,7 @@
                 android:layout_marginEnd="5dp"
                 android:backgroundTint="#e6e6fa"
                 android:src="@drawable/create"
+                app:fabCustomSize="40dp"
                 tools:ignore="SpeakableTextPresentCheck" />
 
 
