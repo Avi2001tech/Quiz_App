@@ -49,7 +49,6 @@ public class QuestionActivity extends AppCompatActivity {
 
         Hooks();
         startTimer();
-
 //        listOfQ.add(new ModelClass("Which Country won the inaugural T20 Cricket World Cup ?","West Indies","England","India","Pakistan","India"));
 //        listOfQ.add(new ModelClass("Which among batsman have the most International runs ?","Sir Don Bradman","Sir Vivian Richards","Sunil Gavaskar","Sachin Tendulkar","Sachin Tendulkar"));
 //        listOfQ.add(new ModelClass("Famous Tennis Player Roger Federer plays for which among the following nations ?","Britain","Switzerland","Portugal","Brazil","Switzerland"));
@@ -63,9 +62,7 @@ public class QuestionActivity extends AppCompatActivity {
 
 //        allQuestionsList = listOfQ;
         modelclass = listOfQ.get(index);
-
         // For first Time Skip and BookMark
-
         callNextButton();
 
         bookMark.setOnClickListener(new View.OnClickListener() {

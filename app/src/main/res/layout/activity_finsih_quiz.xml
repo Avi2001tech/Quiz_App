@@ -7,34 +7,10 @@
     android:padding="15dp"
     tools:context=".FinsihQuiz">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:background="@drawable/gradient_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            app:titleTextColor="#000000"
-            app:subtitleTextColor="#EF6C00"
-            app:titleTextAppearance="@style/toolbar_head"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-
-
-
     <TextView
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="hello"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+        android:textSize="34sp"/>
 </ScrollView>
