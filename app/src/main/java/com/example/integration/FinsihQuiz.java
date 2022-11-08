@@ -34,7 +34,7 @@ public class FinsihQuiz extends AppCompatActivity {
         correct = getIntent().getIntExtra("correct",0);
         wrong = getIntent().getIntExtra("wrong",0);
         resultText = findViewById(R.id.resultText);
-        backToHome = findViewById(R.id.backToHome);
+//        backToHome = findViewById(R.id.backToHome);
 
         resultText.setText(correct + "/"+ "10");
 
@@ -57,13 +57,13 @@ public class FinsihQuiz extends AppCompatActivity {
 //        winnerText.setText(news);
 
 
-        backToHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(FinsihQuiz.this, MainActivity.class);
-                startActivity(i);
-            }
-        });
+//        backToHome.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(FinsihQuiz.this, MainActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
 
 

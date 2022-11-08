@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class before_quiz_start extends AppCompatActivity {
-    public static List<ModelClass> g_quesList = new ArrayList<>();
+    public static List<ModelClass> listOfQ = new ArrayList<>();
     FirebaseFirestore db;
 
     Spinner spinner_1,spinner_2,spinner_3;
@@ -69,7 +69,7 @@ public class before_quiz_start extends AppCompatActivity {
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
                         for(DocumentSnapshot doc : queryDocumentSnapshots){
-                            g_quesList.add(new ModelClass(
+                            listOfQ.add(new ModelClass(
                                     doc.getString("Question"),
                                     doc.getString("oA"),
                                     doc.getString("oB"),
