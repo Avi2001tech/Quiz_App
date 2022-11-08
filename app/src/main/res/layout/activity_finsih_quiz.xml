@@ -11,6 +11,6 @@
         android:id="@+id/resultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello"
+        android:text="lelo"
         android:textSize="34sp"/>
 </ScrollView>
