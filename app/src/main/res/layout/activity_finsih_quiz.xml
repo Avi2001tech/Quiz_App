@@ -7,6 +7,21 @@
     android:padding="15dp"
     tools:context=".FinsihQuiz">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@drawable/gradient_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:titleTextColor="#000000"
+            app:subtitleTextColor="#EF6C00"
+            app:titleTextAppearance="@style/toolbar_head"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
 
 
 
