@@ -14,7 +14,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class before_quiz_start extends AppCompatActivity {
+    public static List<ModelClass> g_quesList = new ArrayList<>();
+    FirebaseFirestore db;
 
     Spinner spinner_1,spinner_2,spinner_3;
     AppCompatButton start;
@@ -46,6 +56,33 @@ public class before_quiz_start extends AppCompatActivity {
                 before_quiz_start.this.finish();
             }
         });
+
+
+        db = FirebaseFirestore.getInstance();
+
+
+
+        db.collection("qqq")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                        for(DocumentSnapshot doc : queryDocumentSnapshots){
+                            g_quesList.add(new ModelClass(
+                                    doc.getString("Question"),
+                                    doc.getString("oA"),
+                                    doc.getString("oB"),
+                                    doc.getString("oC"),
+                                    doc.getString("oD"),
+                                    doc.getString("ans")
+                            ));
+                        }
+
+                    }
+                });
+
+
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
