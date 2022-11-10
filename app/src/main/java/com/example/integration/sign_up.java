@@ -177,6 +177,7 @@ public class sign_up extends AppCompatActivity {
                             userMap.put("username", usernameInp);
                             userMap.put("email", emailInp);
                             userMap.put("phone", phoneInp);
+                            userMap.put("score",0);
 
                             db.collection("users").document(mAuth.getCurrentUser().getUid()).set(userMap);
 
