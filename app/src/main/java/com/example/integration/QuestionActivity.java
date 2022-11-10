@@ -4,11 +4,14 @@ package com.example.integration;
 
 import static com.example.integration.before_quiz_start.listOfQ;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
@@ -35,10 +38,11 @@ public class QuestionActivity extends AppCompatActivity {
     int index=0;
     int correctCount=0;
     int wrongCount=0;
+    CountDownTimer timer;
     TextView qText, optiona, optionb, optionc, optiond;
     CardView cardOA,cardOB, cardOC, cardOD;
     TextView scoreUpdate,countTimer;
-    AppCompatButton nextBtn;
+    AppCompatButton nextBtn,endQuiz;
     FloatingActionButton bookMark;
 
 
@@ -79,25 +83,9 @@ public class QuestionActivity extends AppCompatActivity {
                 //book_mark.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.Red)));
             }
         });
-
-
-
         setAllData();
-
-
-        findViewById(R.id.end_quiz).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(QuestionActivity.this, FinsihQuiz.class);
-                i.putExtra("correct",correctCount);
-                i.putExtra("wrong",wrongCount);
-                startActivity(i);
-            }
-        });
-
-
+        callEndQuiz();
     }
-
 
 
     private void setAllData() {
@@ -127,6 +115,7 @@ public class QuestionActivity extends AppCompatActivity {
         scoreUpdate = findViewById(R.id.score_update);
         countTimer = findViewById(R.id.countTimer);
         bookMark = findViewById(R.id.book_mark);
+        endQuiz=findViewById(R.id.end_quiz);
     }
 
     public void Correct(CardView cardview){
@@ -209,7 +198,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     private void startTimer(){
         long totalTime = 2*60*1000 + 1000;
-        CountDownTimer timer = new CountDownTimer(totalTime,1000) {
+        timer = new CountDownTimer(totalTime,1000) {
             @Override
             public void onTick(long remainingTime) {
                 timeleft =remainingTime;
@@ -223,7 +212,10 @@ public class QuestionActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                timer.cancel();
+                long totalTime = 2*60*1000 + 1000;
                 Intent i = new Intent(QuestionActivity.this, FinsihQuiz.class);
+                i.putExtra("TimeTaken",totalTime - timeleft);
                 i.putExtra("correct",correctCount);
                 i.putExtra("wrong",wrongCount);
                 startActivity(i);
@@ -250,6 +242,57 @@ public class QuestionActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void callEndQuiz(){
+        endQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                timer.cancel();
+                Intent i = new Intent(QuestionActivity.this, FinsihQuiz.class);
+                long totalTime = 2*60*1000 + 1000;
+                i.putExtra("TimeTaken",totalTime - timeleft);
+                i.putExtra("correct",correctCount);
+                i.putExtra("wrong",wrongCount);
+                startActivity(i);
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        AlertDialog.Builder exitDialog = new AlertDialog.Builder(QuestionActivity.this);
+        exitDialog.setTitle("Exit");
+        exitDialog.setIcon(R.drawable.exit_quiz);
+        exitDialog.setMessage("Are you sure want to exit?");
+        exitDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //QuestionActivity.super.onBackPressed();
+                timer.cancel();
+                Intent in = new Intent(QuestionActivity.this, FinsihQuiz.class);
+                long totalTime = 2*60*1000 + 1000;
+                in.putExtra("TimeTaken",totalTime - timeleft);
+                in.putExtra("correct",correctCount);
+                in.putExtra("wrong",wrongCount);
+                startActivity(in);
+                finish();
+
+            }
+        });
+
+        exitDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(QuestionActivity.this, "Great Decision", Toast.LENGTH_SHORT).show();
+            }
+        });
+        exitDialog.show();
+
+
+
     }
 
 

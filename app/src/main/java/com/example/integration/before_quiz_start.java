@@ -31,7 +31,7 @@ public class before_quiz_start extends AppCompatActivity {
     TextView section_name;
     ImageView back_button;
 
-    String[] category ={"-Select any one-","Science","History","Current-Affairs","Sports","Culture & Geography"};
+    String[] category ={"-Select any one-","Easy","Medium","Hard"};
     String[] age ={"-Select any one- ","4-7 years","8-12 years","13-18 years","18+"};
 
     @Override
@@ -88,7 +88,7 @@ public class before_quiz_start extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if ((spinner_1.getSelectedItemPosition() <= 0)){
-                    Toast.makeText(before_quiz_start.this, "Topic can't be empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(before_quiz_start.this, "Difficulty can't be empty", Toast.LENGTH_SHORT).show();
                     //Toast.makeText(before_quiz_start.this, "", Toast.LENGTH_SHORT).show();
                 }
                 else if((spinner_2.getSelectedItemPosition()<=0)){

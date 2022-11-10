@@ -15,16 +15,16 @@
 
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/headline"
-                android:padding="10dp"
-                android:text="Defendee User_name :"
-                android:textAlignment="center"
-                android:layout_marginTop="10dp"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/headline"
+            android:padding="10dp"
+            android:text="Defendee User_name :"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/display_name"
