@@ -5,6 +5,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -41,6 +43,7 @@ public class before_quiz_start extends AppCompatActivity {
 
         Intent intent = getIntent();
         String data = intent.getStringExtra("EXTRA_DATA");
+//        Log.d("my data is ", "here "+data);
 
         start = findViewById(R.id.start_quiz);
         section_name=findViewById(R.id.section_name);
@@ -59,28 +62,123 @@ public class before_quiz_start extends AppCompatActivity {
 
 
         db = FirebaseFirestore.getInstance();
+        DocumentReference questionDatabase = db.collection("questions").document("default");
 
 
+        //---------- Selecting Questions in listOfQ for starting quiz ------------
+        listOfQ.clear();
 
-        db.collection("qqq")
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+        if(data.equals("SPORTS")) {
+//        db.collection("questions").document("default").collection("sports-easy")
+            questionDatabase.collection("sports-easy")
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                        for(DocumentSnapshot doc : queryDocumentSnapshots){
-                            listOfQ.add(new ModelClass(
-                                    doc.getString("Question"),
-                                    doc.getString("oA"),
-                                    doc.getString("oB"),
-                                    doc.getString("oC"),
-                                    doc.getString("oD"),
-                                    doc.getString("ans")
-                            ));
+                            for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                                listOfQ.add(new ModelClass(
+                                        doc.getString("Question"),
+                                        doc.getString("oA"),
+                                        doc.getString("oB"),
+                                        doc.getString("oC"),
+                                        doc.getString("oD"),
+                                        doc.getString("ans")
+                                ));
+                            }
+
                         }
+                    });
+        }
+        else if(data.equals("HISTORY")){
+            questionDatabase.collection("history-easy")
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                    }
-                });
+                            for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                                listOfQ.add(new ModelClass(
+                                        doc.getString("Question"),
+                                        doc.getString("oA"),
+                                        doc.getString("oB"),
+                                        doc.getString("oC"),
+                                        doc.getString("oD"),
+                                        doc.getString("ans")
+                                ));
+                            }
+
+                        }
+                    });
+
+        }
+
+        else if(data.equals("SCIENCE")){
+            questionDatabase.collection("science-easy")
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                            for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                                listOfQ.add(new ModelClass(
+                                        doc.getString("Question"),
+                                        doc.getString("oA"),
+                                        doc.getString("oB"),
+                                        doc.getString("oC"),
+                                        doc.getString("oD"),
+                                        doc.getString("ans")
+                                ));
+                            }
+
+                        }
+                    });
+
+        }
+        else if (data.equals("CURRENT AFFAIRS")){
+            questionDatabase.collection("gk-easy")
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                            for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                                listOfQ.add(new ModelClass(
+                                        doc.getString("Question"),
+                                        doc.getString("oA"),
+                                        doc.getString("oB"),
+                                        doc.getString("oC"),
+                                        doc.getString("oD"),
+                                        doc.getString("ans")
+                                ));
+                            }
+
+                        }
+                    });
+
+        }
+        else{
+            questionDatabase.collection("culture-easy")
+                    .get()
+                    .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                            for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                                listOfQ.add(new ModelClass(
+                                        doc.getString("Question"),
+                                        doc.getString("oA"),
+                                        doc.getString("oB"),
+                                        doc.getString("oC"),
+                                        doc.getString("oD"),
+                                        doc.getString("ans")
+                                ));
+                            }
+
+                        }
+                    });
+
+        }
 
 
 
