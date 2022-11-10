@@ -106,6 +106,7 @@
                 android:background="@drawable/round"
                 android:backgroundTint="#efe"
                 android:elevation="10dp"
+                android:padding="10dp"
                 android:text="Check Details about quiz"
                 android:textSize="18sp"
                 android:fontFamily="@font/headline"

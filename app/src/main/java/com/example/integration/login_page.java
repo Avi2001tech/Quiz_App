@@ -3,6 +3,7 @@ package com.example.integration;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.app.ActivityCompat;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -115,5 +116,11 @@ public class login_page extends AppCompatActivity {
                     }
                 });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        ActivityCompat.finishAffinity(login_page.this);
     }
 }

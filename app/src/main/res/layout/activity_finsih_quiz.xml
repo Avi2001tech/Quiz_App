@@ -4,13 +4,343 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
     tools:context=".FinsihQuiz">
 
-    <TextView
-        android:id="@+id/resultText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="lelo"
-        android:textSize="34sp"/>
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:background="@drawable/gradient_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toolbar"
+                app:titleTextColor="#000000"
+                app:subtitleTextColor="#EF6C00"
+                app:titleTextAppearance="@style/toolbar_head2">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="0dp"
+                    android:src="@drawable/back_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚆ _ ⚆  Score  ⚆ _ ⚆"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:id="@+id/exit"
+                    android:layout_width="58dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="8dp"
+                    android:text="Exit"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:background="@drawable/border"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:padding="5dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="170dp"
+                android:layout_gravity="start|bottom"
+                android:src="@drawable/award"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Score is:"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:fontFamily="@font/headline"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="-35dp"
+                android:layout_gravity="center_vertical|end"/>
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="34sp"
+                android:textColor="#4b0082"
+                android:layout_marginStart="50dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="1sp"
+                android:background="@drawable/line"
+                android:layout_marginStart="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="35sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:layout_marginStart="50dp"
+                android:textSize="34sp"
+                android:textColor="#4b0082"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"/>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="20dp"
+            app:cardCornerRadius="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/headline"
+                android:padding="10dp"
+                android:layout_gravity="start"
+                android:text="Total time taken :"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/time_Taken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/headline"
+                android:padding="10dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="10dp"
+                android:text="01:23 min"
+                android:textColor="#4b0082"
+                android:textSize="20sp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/happy" />
+
+                    <TextView
+                        android:id="@+id/correct_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="Correct"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/correct_count_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/correct_count"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="10"
+                        android:textColor="@android:color/holo_green_light"
+                        android:textSize="24sp" />
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/unhappy" />
+
+                    <TextView
+                        android:id="@+id/wrong_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="Wrong"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/wrong_count_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/wrong_count"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="10"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="24sp" />
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/red_question_mark" />
+
+                    <TextView
+                        android:id="@+id/quiz_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="Unattempt"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/unattempt_count_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/quiz_count"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/bungee"
+                        android:includeFontPadding="false"
+                        android:text="10"
+                        android:textColor="#4b0082"
+                        android:textSize="24sp" />
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:background="#f5fcff"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:drawableEnd="@drawable/forward_button"
+            android:drawablePadding="-15dp"
+            android:fontFamily="@font/headline"
+            android:text="Check your leaderboard rank"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:elevation="10dp"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="-15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/overcome"/>
+
+
+
+
+    </LinearLayout>
+
+
 </ScrollView>

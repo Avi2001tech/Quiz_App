@@ -2,10 +2,12 @@ package com.example.integration;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -130,11 +132,30 @@ public class profile_page extends AppCompatActivity {
         sign_out.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressDialog.show();
-                mAuth.signOut();
-                Intent intent = new Intent(profile_page.this,login_page.class);
-                startActivity(intent);
-                finish();
+
+                AlertDialog.Builder exitDialog = new AlertDialog.Builder(profile_page.this);
+                exitDialog.setTitle("Exit");
+                exitDialog.setIcon(R.drawable.exit_quiz);
+                exitDialog.setMessage("Are you sure want to Sign out?");
+                exitDialog.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        progressDialog.show();
+                        mAuth.signOut();
+                        Intent intent = new Intent(profile_page.this,login_page.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                });
+
+                exitDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(profile_page.this, "Great Decision !!!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                exitDialog.show();
+
             }
         });
 
