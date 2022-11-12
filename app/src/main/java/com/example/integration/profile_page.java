@@ -49,6 +49,7 @@ public class profile_page extends AppCompatActivity {
     CircleImageView imgUser;
     Dialog progressDialog;
     TextView dialog_text;
+    TextView totalScore, quizCount;
 
     FirebaseAuth mAuth;
     FirebaseFirestore dbroot;
@@ -71,6 +72,9 @@ public class profile_page extends AppCompatActivity {
         status = findViewById(R.id.status);
         imgUser = findViewById(R.id.user_pic);
 
+        quizCount = findViewById(R.id.quiz_count);
+        totalScore = findViewById(R.id.total_score);
+
         progressDialog = new Dialog(profile_page.this);
         progressDialog.setContentView(R.layout.dialog);
         progressDialog.setCancelable(false);
@@ -88,8 +92,10 @@ public class profile_page extends AppCompatActivity {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         if (documentSnapshot.exists()) {
-                            user_name.setText(documentSnapshot.getString("fullName") + " " + documentSnapshot.getString("username"));
+                            user_name.setText(documentSnapshot.getString("username"));
                             user_description.setText(documentSnapshot.getString("email"));
+                            totalScore.setText(Integer.toString(documentSnapshot.getLong("score").intValue()));
+                            quizCount.setText(Integer.toString(documentSnapshot.getLong("quizCount").intValue()));
 
                         } else {
                             Toast.makeText(profile_page.this, "User not Found !!", Toast.LENGTH_LONG).show();

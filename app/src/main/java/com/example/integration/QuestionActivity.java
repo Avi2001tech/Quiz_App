@@ -21,7 +21,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.rpc.RequestInfo;
 
 import java.util.ArrayList;
@@ -44,6 +48,9 @@ public class QuestionActivity extends AppCompatActivity {
     TextView scoreUpdate,countTimer;
     AppCompatButton nextBtn,endQuiz;
     FloatingActionButton bookMark;
+    FirebaseAuth mAuth;
+    FirebaseFirestore db;
+    int scoredb;
 
 
     @Override
@@ -294,6 +301,30 @@ public class QuestionActivity extends AppCompatActivity {
 
 
     }
+
+
+
+//    private void updateScore() {
+//
+//        db = FirebaseFirestore.getInstance();
+//
+//        db.collection("users").document(mAuth.getCurrentUser().getUid())
+//                .get()
+//                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                        scoredb = documentSnapshot.getLong("score").intValue();
+//                    }
+//                });
+//
+//        scoredb = scoredb + correctCount;
+//        db.collection("users").document(mAuth.getCurrentUser().getUid())
+//                .update(
+//                        "score",scoredb
+//                );
+//
+//
+//    }
 
 
 

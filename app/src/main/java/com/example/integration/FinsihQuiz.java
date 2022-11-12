@@ -1,6 +1,7 @@
 package com.example.integration;
 
 
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,9 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -30,6 +33,10 @@ public class FinsihQuiz extends AppCompatActivity {
     Toolbar toolbar;
     ImageView back_button;
     long timeTaken;
+
+    FirebaseAuth mAuth;
+    FirebaseFirestore db;
+    int scoredb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +68,7 @@ public class FinsihQuiz extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                updateScore();
                 FinsihQuiz.this.finish();
             }
         });
@@ -68,9 +76,11 @@ public class FinsihQuiz extends AppCompatActivity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                updateScore();
                 final Intent intent = new Intent(FinsihQuiz.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -80,10 +90,21 @@ public class FinsihQuiz extends AppCompatActivity {
                         - TimeUnit.MINUTES.toSeconds((TimeUnit.MILLISECONDS.toMinutes(timeTaken))));
 
         total_time_taken.setText(time);
+    }
 
 
 
+    private void updateScore() {
+        db = FirebaseFirestore.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
+        db.collection("users").document(mAuth.getCurrentUser().getUid())
+                .update(
+                        "score", FieldValue.increment(correct),
+                        "quizCount",FieldValue.increment(1)
+                );
 
     }
+
+
 }
