@@ -21,6 +21,7 @@
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/bookmark.xml" value="0.146" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/count.xml" value="0.186" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/create.xml" value="0.146" />
+        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/draw.xml" value="0.146" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/email.xml" value="0.186" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/emails.xml" value="0.186" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/feedback_icon.xml" value="0.146" />
@@ -30,7 +31,9 @@
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/home_icon.xml" value="0.186" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/ic_baseline_people_24.xml" value="0.186" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.186" />
+        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/leaderboard.xml" value="0.146" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/line.xml" value="0.146" />
+        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/notification.xml" value="0.146" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/one.xml" value="0.146" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/person_black.xml" value="0.186" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/privacy.xml" value="0.186" />
@@ -54,7 +57,7 @@
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_create_splash_screen.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_finsih_quiz.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_home.xml" value="0.21822916666666667" />
-        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_leaderboard.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_leaderboard.xml" value="0.264" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_login_page.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_profile_page.xml" value="0.2" />
@@ -70,6 +73,7 @@
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/fragment_question_difficulty_selection.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/home.xml" value="0.18974358974358974" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/nav_header.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/rank_card.xml" value="0.23125" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/start_question_layout.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/menu/bottom_navigation.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/menu/drawer_navigation.xml" value="0.23229166666666667" />
