@@ -11,4 +11,5 @@ public class RankModel {
         this.rank = rank;
     }
 
+
 }
