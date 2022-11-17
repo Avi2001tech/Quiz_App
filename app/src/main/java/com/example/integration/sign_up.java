@@ -180,6 +180,7 @@ public class sign_up extends AppCompatActivity {
                             userMap.put("phone", phoneInp);
                             userMap.put("score",0);
                             userMap.put("quizCount",0);
+                            userMap.put("status","Jhatpat Quiz is amazing");
 
 
                             db.collection("users").document(mAuth.getCurrentUser().getUid()).set(userMap);

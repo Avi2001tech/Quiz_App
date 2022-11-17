@@ -226,6 +226,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/emails"
                     android:text="sample_email@gmail.com"
+                    android:clickable="false"
                     android:background="@android:color/transparent"
                     android:drawablePadding="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -242,6 +243,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/still_call"
                     android:text="9876543210"
+
                     android:background="@android:color/transparent"
                     android:drawablePadding="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -257,7 +259,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/user"
-                    android:text="How its goinggggg"
+                    android:text=""
                     android:background="@android:color/transparent"
                     android:drawablePadding="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>

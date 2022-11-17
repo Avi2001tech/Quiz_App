@@ -32,6 +32,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.ByteArrayOutputStream;
@@ -50,6 +51,7 @@ public class profile_page extends AppCompatActivity {
     Dialog progressDialog;
     TextView dialog_text;
     TextView totalScore, quizCount;
+    String userId;
 
     FirebaseAuth mAuth;
     FirebaseFirestore dbroot;
@@ -82,10 +84,11 @@ public class profile_page extends AppCompatActivity {
         dialog_text = progressDialog.findViewById(R.id.dialog_text);
         dialog_text.setText("Signning out ....");
 
+
         mAuth = FirebaseAuth.getInstance();
 
         dbroot = FirebaseFirestore.getInstance();
-        String userId = mAuth.getCurrentUser().getUid();
+        userId = mAuth.getCurrentUser().getUid();
 //        userId = "raman61";
         DocumentReference document = dbroot.collection("users").document(userId);
         document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -93,7 +96,13 @@ public class profile_page extends AppCompatActivity {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         if (documentSnapshot.exists()) {
                             user_name.setText(documentSnapshot.getString("username"));
-                            user_description.setText(documentSnapshot.getString("email"));
+                            user_description.setText(documentSnapshot.getString("status"));
+                            display_email.setText(documentSnapshot.getString("email"));
+
+                            display_n.setText(documentSnapshot.getString("username"));
+                            display_phone_no.setText(documentSnapshot.getString("phone"));
+                            status.setText(documentSnapshot.getString("status"));
+
                             totalScore.setText(Integer.toString(documentSnapshot.getLong("score").intValue()));
                             quizCount.setText(Integer.toString(documentSnapshot.getLong("quizCount").intValue()));
 
@@ -178,44 +187,69 @@ public class profile_page extends AppCompatActivity {
                 }
                 else{
                     String s = display_n.getText().toString();
-                    String display_e = display_email.getText().toString();
+//                    String display_e = display_email.getText().toString();
                     String display_p = display_phone_no.getText().toString();
                     String display_status = status.getText().toString();
 
 
-                    SharedPreferences pref = getSharedPreferences("display",MODE_PRIVATE);
-                    SharedPreferences.Editor editor = pref.edit();
+                    dbroot = FirebaseFirestore.getInstance();
+                    mAuth = FirebaseAuth.getInstance();
 
-                    editor.putString("str",s);
-                    editor.putString("email",display_e);
-                    editor.putString("phone_no",display_p);
-                    editor.putString("status",display_status);
-                    editor.apply();
+                    dbroot.collection("users").document(userId)
+                      .update(
+                              "username",s,
+                              "phone",display_p,
+                              "status",display_status
 
-                    display_n.setText(s);
-                    user_name.setText(s);
-                    user_description.setText(display_status);
-                    display_email.setText(display_e);
-                    display_phone_no.setText(display_p);
-                    status.setText(display_status);
+                            );
+
+
+
+//                    SharedPreferences pref = getSharedPreferences("display",MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = pref.edit();
+
+//                    editor.putString("str",s);
+//                    editor.putString("email",display_e);
+//                    editor.putString("phone_no",display_p);
+//                    editor.putString("status",display_status);
+//                    editor.apply();
+
+//                    display_n.setText(s);
+//                    user_name.setText(s);
+//                    user_description.setText(display_status);
+//                    display_email.setText(display_e);
+//                    display_phone_no.setText(display_p);
+//                    status.setText(display_status);
+                    dialog_text.setText("Updating...");
+                    progressDialog.show();
+                    finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(getIntent());
+                    overridePendingTransition(0, 0);
+                    progressDialog.dismiss();
+
+
                     Toast.makeText(profile_page.this, "Your profile is updated now", Toast.LENGTH_SHORT).show();
+
                     display.setVisibility(View.GONE);
+
                 }
 
             }
         });
 
-        SharedPreferences getShared = getSharedPreferences("display",MODE_PRIVATE);
-        String val = getShared.getString("str","User name");
-        String val2 = getShared.getString("email","sample_email@gmail.com");
-        String val3 = getShared.getString("phone_no","9876543210");
-        String val4 = getShared.getString("status","Your status will be displayed here");
-        display_n.setText(val);
-        user_name.setText(val);
-        user_description.setText(val4);
-        display_email.setText(val2);
-        display_phone_no.setText(val3);
-        status.setText(val4);
+//        SharedPreferences getShared = getSharedPreferences("display",MODE_PRIVATE);
+//        String val = getShared.getString("str","User name");
+//        String val2 = getShared.getString("email","sample_email@gmail.com");
+//        String val3 = getShared.getString("phone_no","9876543210");
+//        String val4 = getShared.getString("status","Your status will be displayed here");
+//        display_n.setText(val);
+//        user_name.setText(val);
+//        user_description.setText(val4);
+//        display_email.setText(val2);
+//        display_phone_no.setText(val3);
+//        status.setText(val4);
+
 
 
 
@@ -235,6 +269,8 @@ public class profile_page extends AppCompatActivity {
         });
 
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
