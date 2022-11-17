@@ -34,6 +34,7 @@ public class sign_up extends AppCompatActivity {
     String passVal = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{8,20})";
 
     FirebaseAuth mAuth;
+    FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -171,13 +172,16 @@ public class sign_up extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            FirebaseFirestore db = FirebaseFirestore.getInstance();
+                            db = FirebaseFirestore.getInstance();
                             Map<String, Object> userMap = new HashMap<>();
                             userMap.put("fullName",fullnameInp);
                             userMap.put("username", usernameInp);
                             userMap.put("email", emailInp);
                             userMap.put("phone", phoneInp);
                             userMap.put("score",0);
+                            userMap.put("quizCount",0);
+                            userMap.put("status","Jhatpat Quiz is amazing");
+
 
                             db.collection("users").document(mAuth.getCurrentUser().getUid()).set(userMap);
 

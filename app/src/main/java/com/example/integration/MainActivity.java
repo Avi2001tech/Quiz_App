@@ -26,6 +26,7 @@ import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     NavigationView nav_view;
     BottomNavigationView bottom_bar;
     ImageView sport,history,culture,gk,science;
+    FirebaseAuth mAuth;
 
 
     @Override
