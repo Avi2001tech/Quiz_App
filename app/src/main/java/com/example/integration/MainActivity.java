@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -24,13 +25,18 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    public static ArrayList<RankerClass> arrRank = new ArrayList<>();
     private ImageSlider imageSlider;
     Toolbar toolbar;
     DrawerLayout drawer_lay;
@@ -38,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottom_bar;
     ImageView sport,history,culture,gk,science;
     FirebaseAuth mAuth;
+    FirebaseFirestore db;
 
 
     @Override
@@ -54,6 +61,28 @@ public class MainActivity extends AppCompatActivity {
         culture=findViewById(R.id.culture_pic);
         gk=findViewById(R.id.current_affairs_pic);
         science=findViewById(R.id.science_pic);
+
+
+        db = FirebaseFirestore.getInstance();
+        db.collection("users")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                        for (DocumentSnapshot doc : queryDocumentSnapshots) {
+                            Log.d("my masg", "onSuccess: running");
+                            arrRank.add(new RankerClass(
+                                    doc.getString("username"),
+//                                    doc.getString("fullName")
+                                    Integer.toString(doc.getLong("score").intValue())
+                            ));
+                            Log.d("my arrRank", "onSuccess: "+arrRank.get(0).username);
+                        }
+
+                    }
+                });
+
 
 
         // click images to move to activity
