@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6e6fa"
-    tools:context=".login_page">
+    tools:context=".AdminLogin">
 
     <LinearLayout
         android:id="@+id/login_page"
@@ -14,46 +13,15 @@
         android:padding="25dp"
         android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/login_icon"
-                android:layout_gravity="start"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_marginStart="-2dp"
-                android:layout_marginBottom="-15dp"
-                android:src="@drawable/sign_up_icon"
-                android:contentDescription="clipart_login"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent" />
-
-            <TextView
-                android:id="@+id/adminBtn"
-                android:clickable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/border"
-                android:gravity="center|end"
-                android:padding="5dp"
-                android:backgroundTint="@android:color/white"
-                android:text="Admin panel"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:elevation="10dp"
-                app:layout_constraintHorizontal_bias="0.98"
-                app:layout_constraintLeft_toRightOf="@+id/login_icon"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
+        <ImageView
+            android:id="@+id/login_icon"
+            android:layout_gravity="start"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="-2dp"
+            android:layout_marginBottom="-15dp"
+            android:src="@drawable/sign_up_icon" />
 
 
         <TextView
@@ -125,18 +93,11 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:background="@android:color/transparent"
-                android:layout_margin="5dp"
-                android:text="Forgot password?"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:textColor="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_home"
@@ -150,6 +111,7 @@
                 android:text="Let's Go"
                 android:fontFamily="@font/bungee"
                 android:textColor="@color/black" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sign_button"
                 android:layout_width="match_parent"

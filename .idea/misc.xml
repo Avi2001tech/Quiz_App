@@ -51,6 +51,7 @@
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/upload.xml" value="0.146" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/user_2.xml" value="0.186" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/drawable/user_black.xml" value="0.186" />
+        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_admin_login.xml" value="0.21822916666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_before_quiz_start.xml" value="0.21822916666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_challenge.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_create.xml" value="0.1" />
@@ -66,6 +67,7 @@
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_sign_up.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/activity_splash_screen.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/app_bar_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/content_admin_login.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/content_main.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/dialog.xml" value="0.23229166666666667" />
         <entry key="..\:/Android_studio/Quiz all components/Integration - Copy/app/src/main/res/layout/fragment_challenge.xml" value="0.23229166666666667" />

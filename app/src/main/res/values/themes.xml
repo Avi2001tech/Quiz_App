@@ -19,4 +19,10 @@
         <item name="colorOnPrimary">@color/white</item>
 
     </style>
+    <style name="Theme.Integration.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Integration.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Integration.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
