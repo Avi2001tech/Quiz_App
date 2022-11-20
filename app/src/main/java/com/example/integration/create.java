@@ -6,10 +6,12 @@ import static com.example.integration.selection.subject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
@@ -71,13 +73,12 @@ public class create extends AppCompatActivity {
                 q2o4str = q2o4.getText().toString().trim();
                 ans2str = ans2.getText().toString().trim();
 
-//                if(validate(q1,q2),q1o1.q2o2,....)
 
-//                createNewQuiz();
 
 
                 ModelClass question1 = new ModelClass(q1str, q1o1str, q1o2str, q1o3str, q1o4str, ans1str);
                 ModelClass question2 = new ModelClass(q2str, q2o1str, q2o2str, q2o3str, q2o4str, ans2str);
+
 
 
 
@@ -87,27 +88,30 @@ public class create extends AppCompatActivity {
 
 
                 String quizMadeStr = Integer.toString(quizMade+1);
-//                String nameForQuizList = "random-"+quizMadeStr;
 
                 String nameForQuizList = challengeSubject+"-"+quizMadeStr;
 
-//                db.collection("users").document(userId)
-//                                .collection(quizMadeStr).add(question1);
-//                db.collection("users").document(userId)
-//                        .collection(quizMadeStr).add(question2);
+                if(validate(q1str,q1o1str, q1o2str,q1o3str, q1o4str,ans1str)){
+                    db.collection("quizdata").document(userId)
+                            .collection("challenge").document(challengeSubject)
+                            .collection(nameForQuizList).add(question1);
 
-                db.collection("quizdata").document(userId).
-                        collection("challenge").document(challengeSubject)
-                                .collection(nameForQuizList).add(question1);
+                    db.collection("questions").document("user")
+                            .collection(challengeSubject).add(question1);
 
-                db.collection("quizdata").document(userId).
-                        collection("challenge").document(challengeSubject)
-                        .collection(nameForQuizList).add(question2);
+                }
+                if(validate(q2str,q2o1str, q2o2str,q2o3str, q2o4str,ans2str)){
 
+                    db.collection("quizdata").document(userId)
+                            .collection("challenge").document(challengeSubject)
+                            .collection(nameForQuizList).add(question2);
 
+                    db.collection("questions").document("user")
+                            .collection(challengeSubject).add(question2);
 
+                }
 
-
+//                createNewQuiz();
 
                 // update the quizMade by ++1
 
@@ -126,7 +130,10 @@ public class create extends AppCompatActivity {
                         );
 
 
-
+                Toast.makeText(create.this, "Your quiz is submitted", Toast.LENGTH_SHORT).show();
+                final Intent intent = new Intent(create.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 finish();
 
             }
@@ -181,4 +188,53 @@ public class create extends AppCompatActivity {
         showTotal = findViewById(R.id.quiz_made_id);
 
     }
+
+
+    private boolean validate(String q1str, String q1o1str,String  q1o2str, String q1o3str, String q1o4str, String ans1str){
+
+        if(q1str.isEmpty()){
+            q1.setError("This field cannot be empty");
+            q1.requestFocus();
+
+            return false;
+        }
+        if(q1o1str.isEmpty()){
+            q1o1.setError("This field cannot be empty");
+            q1o1.requestFocus();
+
+            return false;
+        }
+        if(q1o2str.isEmpty()){
+            q1o2.setError("This field cannot be empty");
+            q1o2.requestFocus();
+
+            return false;
+        }
+        if(q1o3str.isEmpty()){
+            q1o3.setError("This field cannot be empty");
+            q1o3.requestFocus();
+
+            return false;
+        }
+
+        if(q1o4str.isEmpty()){
+            q1o4.setError("This field cannot be empty");
+            q1o4.requestFocus();
+
+            return false;
+        }
+        if(ans1str.isEmpty()){
+            ans1.setError("This field cannot be empty");
+            ans1.requestFocus();
+
+            return false;
+        }
+
+
+        return true;
+    }
+
+
+
+
 }
