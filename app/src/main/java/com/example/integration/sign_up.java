@@ -19,8 +19,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -172,6 +175,7 @@ public class sign_up extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            // for collection "users"
                             db = FirebaseFirestore.getInstance();
                             Map<String, Object> userMap = new HashMap<>();
                             userMap.put("fullName",fullnameInp);
@@ -180,10 +184,34 @@ public class sign_up extends AppCompatActivity {
                             userMap.put("phone", phoneInp);
                             userMap.put("score",0);
                             userMap.put("quizCount",0);
+                            userMap.put("quizMade",0);
                             userMap.put("status","Jhatpat Quiz is amazing");
 
 
                             db.collection("users").document(mAuth.getCurrentUser().getUid()).set(userMap);
+
+//                            Map<String,Object> tempMap = new HashMap<>();
+//                            tempMap.put("tempscore",77);
+//
+//                            db.collection("djdj").document(mAuth.getCurrentUser().getUid())
+//                                    .collection("dhoom123").document("flower")
+//                                    .collection("oktata").document("america").set(tempMap);
+
+                            // for collection "quizdata"
+                            Map<String, Object> subjectMap = new HashMap<>();
+                            subjectMap.put("quizcount",0);
+                            subjectMap.put("quizlist", Arrays.asList());
+                            CollectionReference challenge = db.collection("quizdata").document(mAuth.getCurrentUser().getUid()).collection("challenge");
+                            challenge.document("sports-easy").set(subjectMap);
+                            challenge.document("science-easy").set(subjectMap);
+                            challenge.document("history-easy").set(subjectMap);
+                            challenge.document("gk-easy").set(subjectMap);
+                            challenge.document("culture-easy").set(subjectMap);
+
+
+
+
+
 
                             // Sign in success, update UI with the signed-in user's information
                             progressDialog.dismiss();

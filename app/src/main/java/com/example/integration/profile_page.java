@@ -97,9 +97,9 @@ public class profile_page extends AppCompatActivity {
                         if (documentSnapshot.exists()) {
                             user_name.setText(documentSnapshot.getString("username"));
                             user_description.setText(documentSnapshot.getString("status"));
-                            display_email.setText(documentSnapshot.getString("email"));
 
                             display_n.setText(documentSnapshot.getString("username"));
+                            display_email.setText(documentSnapshot.getString("email"));
                             display_phone_no.setText(documentSnapshot.getString("phone"));
                             status.setText(documentSnapshot.getString("status"));
 

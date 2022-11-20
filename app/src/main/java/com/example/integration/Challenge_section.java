@@ -32,8 +32,11 @@ public class Challenge_section extends Fragment {
 
     String[] category ={"-Select any one-","Science","History","Current-Affairs","Sports","Culture & Geography"};
     String[] age ={"-Select any one- ","4-7 years","8-12 years","13-18 years","18+"};
-    String[] time ={"-Select any one- ","12-1 pm","1-2 pm","3-4 pm","4-5 pm","5-6 pm","6-7 pm","7-8 pm","8-9 pm","9-10 pm","10-11 pm","11-11:59 pm",
-            "12-1 am","1-2 am","3-4 am","4-5 am","5-6 am","6-7 am","7-8 am","8-9 am","9-10 am","10-11 am","11-11:59 am"};
+//    String[] time ={"-Select any one- ","12-1 pm","1-2 pm","3-4 pm","4-5 pm","5-6 pm","6-7 pm","7-8 pm","8-9 pm","9-10 pm","10-11 pm","11-11:59 pm",
+//            "12-1 am","1-2 am","3-4 am","4-5 am","5-6 am","6-7 am","7-8 am","8-9 am","9-10 am","10-11 am","11-11:59 am"};
+    String[] time = {"-Select any one-", "2 min", "5 min", "7 min", "10 min"};
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

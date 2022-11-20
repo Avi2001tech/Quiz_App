@@ -19,6 +19,8 @@ public class Challenge extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_challenge);
 
+
+
         ImageView back_button = findViewById(R.id.back_button);
 
         back_button.setOnClickListener(new View.OnClickListener() {

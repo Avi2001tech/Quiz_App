@@ -14,14 +14,26 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class selection extends AppCompatActivity {
+    public static String subject;
+    String subjectColl;
     Spinner spinner_1;
     Spinner spinner_2;
     CheckBox easy,medium,hard;
     AppCompatButton button;
+    public static int quizMade;
+    TextView countGame;
+
+    FirebaseFirestore db;
+    FirebaseAuth mAuth;
 
     String[] category ={"-Select any one-","Science","History","Current-Affairs","Sports","Culture & Geography"};
     String[] age ={"-Select any one- ","4-7 years","8-12 years","13-18 years","18+"};
@@ -37,6 +49,25 @@ public class selection extends AppCompatActivity {
         medium = findViewById(R.id.medium);
         hard= findViewById(R.id.hard);
         button=findViewById(R.id.next);
+//        countGame = findViewById(R.id.game_count);
+        quizMade=0;
+
+//
+//        db = FirebaseFirestore.getInstance();
+//        mAuth = FirebaseAuth.getInstance();
+//
+//        db.collection("users").document(mAuth.getCurrentUser().getUid())
+//                .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+//                    @Override
+//                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+//                        if(documentSnapshot.exists()){
+//                            quizMade = documentSnapshot.getLong("quizMade").intValue();
+//
+//                        }
+//                    }
+//                });
+
+
 
                                       // spinner_1
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(selection.this, android.R.layout.simple_spinner_item,category){
@@ -70,6 +101,7 @@ public class selection extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String value = adapterView.getItemAtPosition(i).toString();
                 if(i>=1){
+                    subject = value;
                     Toast.makeText(selection.this, value +" is selected", Toast.LENGTH_SHORT).show();
                 }
 
@@ -128,6 +160,26 @@ public class selection extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if (subject == "Science") {
+                    subjectColl = "science-easy";
+                }
+                else if(subject =="History"){
+                    subjectColl = "history-easy";
+                }
+                else if (subject == "Sports") {
+                    subjectColl = "sports-easy";
+                }
+                else if (subject == "Current-Affairs") {
+                    subjectColl = "gk-easy";
+                }
+                else{
+                    subjectColl = "culture-easy";
+                }
+
+
+
+
                 String check_easy = easy.getText().toString();
                 String check_medium = medium.getText().toString();
                 String check_hard = hard.getText().toString();
@@ -144,8 +196,36 @@ public class selection extends AppCompatActivity {
                     Toast.makeText(selection.this, "Select any one", Toast.LENGTH_SHORT).show();
                 }
                 else if(easy.isChecked() || hard.isChecked() || medium.isChecked()){
+
+
+
+
+
+                    db = FirebaseFirestore.getInstance();
+                    mAuth = FirebaseAuth.getInstance();
+
+                    db.collection("quizdata").document(mAuth.getCurrentUser().getUid())
+                            .collection("challenge").document(subjectColl)
+                            .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                                @Override
+                                public void onSuccess(DocumentSnapshot documentSnapshot) {
+                                    if(documentSnapshot.exists()){
+                                        quizMade = documentSnapshot.getLong("quizcount").intValue();
+
+                                    }
+                                }
+                            });
+
+
+
+
+
+
+
+
                     Intent i = new Intent(selection.this,create.class);
                     startActivity(i);
+
                 }
                 else{
                     Toast.makeText(selection.this, "Please select difficulty level", Toast.LENGTH_SHORT).show();

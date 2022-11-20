@@ -24,6 +24,7 @@
 
 
         <TextView
+            android:id="@+id/quiz_made_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Create your quiz questions below :)"
@@ -226,7 +227,7 @@
             android:layout_marginBottom="25dp"
             app:cardBackgroundColor="#ace1af"
             app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
+            app:cardElevation="5dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -402,1479 +403,1481 @@
             </LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#ffff99"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_3"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_3"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your Third Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_3_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_3"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/upload_image_if_necessary"
-                        android:drawableStart="@drawable/upload"
-                        android:paddingLeft="15dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_3_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_3_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_3_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_3_pic" />
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_3_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_3_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_3_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_3"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_3_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_3_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_3_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_3_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_3_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_3_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_3_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_3_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_3"
-                    android:layout_marginTop="15dp"
-                    android:background="@android:color/transparent"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#b2ffff"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_4"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_4"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your fourth Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_4_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_4"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/upload_image_if_necessary"
-                        android:drawableStart="@drawable/upload"
-                        android:paddingLeft="15dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_4_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_4_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_4_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_4_pic" />
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_4_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_4_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_4_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_4"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_4_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_4_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_4_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_4_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_4_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_4_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_4_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_4_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_4"
-                    android:layout_marginTop="15dp"
-                    android:background="@android:color/transparent"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#fad6a5"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_5"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_5"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your fifth Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_5_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_5"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/upload_image_if_necessary"
-                        android:drawableStart="@drawable/upload"
-                        android:paddingLeft="15dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_5_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_5_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_5_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_5_pic" />
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_5_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_5_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_5_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_5"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_5_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_5_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_5_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_5_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_5_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_5_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_5_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_5_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_5"
-                    android:layout_marginTop="15dp"
-                    android:background="@android:color/transparent"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#F0737b"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_6"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_6"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your sixth Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_6_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_6"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:background="@android:color/transparent"
-                        android:contentDescription="@string/upload_image_if_necessary"
-                        android:drawableStart="@drawable/upload"
-                        android:paddingLeft="15dp"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_6_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_6_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_6_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_6_pic" />
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_6_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_6_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_6_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_6"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_6_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_6_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_6_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_6_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_6_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_6_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_6_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_6_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_6"
-                    android:layout_marginTop="15dp"
-                    android:background="@android:color/transparent"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#008b8b"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_7"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_7"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your seventh Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_7_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_7"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:paddingLeft="15dp"
-                        android:drawableStart="@drawable/upload"
-                        android:background="@android:color/transparent"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_7_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_7_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_7_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_7_pic"/>
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_7_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_7_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_7_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_7"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_7_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_7_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_7_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_7_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_7_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_7_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_7_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_7_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_7"
-                    android:layout_marginTop="15dp"
-                    android:background="@android:color/transparent"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#ffdf00"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_8"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_8"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your eigth Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_8_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_8"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:paddingLeft="15dp"
-                        android:drawableStart="@drawable/upload"
-                        android:background="@android:color/transparent"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_8_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_8_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_8_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_8_pic"/>
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_8_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_8_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_8_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_8"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_8_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_8_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_8_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_8_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_8_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_8_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_8_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_8_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_8"
-                    android:layout_marginTop="15dp"
-                    android:background="@android:color/transparent"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#bfff00"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_9"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_9"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your ninth Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_9_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_9"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:paddingLeft="15dp"
-                        android:drawableStart="@drawable/upload"
-                        android:background="@android:color/transparent"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_9_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_9_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_9_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_9_pic"/>
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_9_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_9_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_9_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_9"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_9_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_9_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_9_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_9_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_9_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_9_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_9_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_9_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_9"
-                    android:layout_marginTop="15dp"
-                    android:background="#ffffff"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_marginBottom="25dp"
-            app:cardBackgroundColor="#9ab973"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="5dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/question_10"
-                android:layout_marginBottom="25dp"
-                android:orientation="vertical"
-                android:padding="15dp">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_question_10"
-                    android:background="@android:color/transparent"
-                    android:layout_marginBottom="15dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_question_10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/question"
-                        android:drawablePadding="5dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Write your Tenth Question :"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="250dp"
-                        android:layout_height="150dp"
-                        android:id="@+id/question_10_pic"
-                        android:background="@android:color/transparent"
-                        android:layout_gravity="center_horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/upload_10"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:paddingLeft="15dp"
-                        android:drawableStart="@drawable/upload"
-                        android:background="@android:color/transparent"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_10_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_10_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_10_pic"
-                        app:layout_constraintTop_toTopOf="@+id/question_10_pic"/>
-
-                    <TextView
-                        android:layout_width="225dp"
-                        android:layout_height="wrap_content"
-                        android:text="Upload image if necessary"
-                        android:textColor="#000000"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textAlignment="center"
-                        app:layout_constraintBottom_toBottomOf="@+id/question_10_pic"
-                        app:layout_constraintEnd_toEndOf="@+id/question_10_pic"
-                        app:layout_constraintStart_toStartOf="@+id/question_10_pic"
-                        app:layout_constraintTop_toBottomOf="@+id/upload_10"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_10_1"
-                    android:background="@drawable/round_white"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_10_1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/one"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 1"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_10_2"
-                    android:background="@drawable/round_white"
-                    android:layout_marginBottom="5dp"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_10_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/two"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 2"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_10_3"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_10_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/three"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 3"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_option_10_4"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/round_white"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_option_10_4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/four"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Option 4"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/lay_ans_10"
-                    android:layout_marginTop="15dp"
-                    android:background="@android:color/transparent"
-                    style="@style/Widget.Design.TextInputLayout">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/text_ans_10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
-                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-                        android:hint="Type correct option"
-                        android:fontFamily="@font/headline"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#ffff99"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_3"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_3"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your Third Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_3_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_3"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:contentDescription="@string/upload_image_if_necessary"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_3_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_3_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_3_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_3_pic" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_3_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_3_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_3_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_3"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_3_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_3_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_3_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_3_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_3_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_3_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_3_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_3_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_3"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#b2ffff"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_4"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_4"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your fourth Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_4_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_4"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:contentDescription="@string/upload_image_if_necessary"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_4_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_4_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_4_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_4_pic" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_4_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_4_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_4_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_4"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_4_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_4_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_4_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_4_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_4_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_4_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_4_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_4_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_4"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_5"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#fad6a5"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_5"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_5"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_5"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your fifth Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_5_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_5"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:contentDescription="@string/upload_image_if_necessary"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_5_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_5_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_5_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_5_pic" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_5_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_5_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_5_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_5"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_5_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_5_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_5_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_5_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_5_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_5_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_5_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_5_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_5"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_5"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_6"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#F0737b"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_6"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_6"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_6"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your sixth Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_6_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_6"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:contentDescription="@string/upload_image_if_necessary"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_6_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_6_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_6_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_6_pic" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_6_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_6_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_6_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_6"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_6_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_6_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_6_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_6_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_6_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_6_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_6_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_6_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_6"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_6"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_7"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#008b8b"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_7"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_7"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_7"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your seventh Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_7_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_7"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_7_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_7_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_7_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_7_pic"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_7_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_7_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_7_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_7"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_7_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_7_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_7_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_7_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_7_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_7_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_7_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_7_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_7"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_7"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_8"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#ffdf00"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_8"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_8"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_8"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your eigth Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_8_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_8"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_8_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_8_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_8_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_8_pic"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_8_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_8_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_8_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_8"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_8_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_8_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_8_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_8_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_8_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_8_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_8_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_8_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_8"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_8"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_9"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#bfff00"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_9"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_9"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_9"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your ninth Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_9_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_9"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_9_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_9_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_9_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_9_pic"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_9_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_9_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_9_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_9"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_9_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_9_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_9_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_9_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_9_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_9_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_9_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_9_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_9"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="#ffffff"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_9"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/card_10"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="25dp"-->
+<!--            app:cardBackgroundColor="#9ab973"-->
+<!--            app:cardCornerRadius="16dp"-->
+<!--            app:cardElevation="5dp">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/question_10"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="15dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_question_10"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    android:layout_marginBottom="15dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_question_10"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/question"-->
+<!--                        android:drawablePadding="5dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Write your Tenth Question :"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="250dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:id="@+id/question_10_pic"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        android:layout_gravity="center_horizontal"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"/>-->
+<!--                    <androidx.appcompat.widget.AppCompatButton-->
+<!--                        android:id="@+id/upload_10"-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:paddingLeft="15dp"-->
+<!--                        android:drawableStart="@drawable/upload"-->
+<!--                        android:background="@android:color/transparent"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_10_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_10_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_10_pic"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/question_10_pic"/>-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="225dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Upload image if necessary"-->
+<!--                        android:textColor="#000000"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textAlignment="center"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/question_10_pic"-->
+<!--                        app:layout_constraintEnd_toEndOf="@+id/question_10_pic"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/question_10_pic"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/upload_10"/>-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_10_1"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_10_1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/one"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 1"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_10_2"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_10_2"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/two"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 2"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_10_3"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_10_3"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/three"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 3"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_option_10_4"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:background="@drawable/round_white"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_option_10_4"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawableStart="@drawable/four"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Option 4"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:id="@+id/lay_ans_10"-->
+<!--                    android:layout_marginTop="15dp"-->
+<!--                    android:background="@android:color/transparent"-->
+<!--                    style="@style/Widget.Design.TextInputLayout">-->
+
+<!--                    <com.google.android.material.textfield.TextInputEditText-->
+<!--                        android:id="@+id/text_ans_10"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:drawablePadding="10dp"-->
+<!--                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"-->
+<!--                        android:hint="Type correct option"-->
+<!--                        android:fontFamily="@font/headline"/>-->
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </androidx.cardview.widget.CardView>-->
+<!--        -->
+<!--        -->
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
