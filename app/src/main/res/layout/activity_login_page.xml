@@ -33,7 +33,6 @@
 
             <TextView
                 android:id="@+id/adminBtn"
-                android:clickable="true"
                 android:layout_width="wrap_content"
                 android:layout_height="35dp"
                 android:layout_gravity="center"
@@ -53,8 +52,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
         <TextView
             android:layout_marginTop="-20dp"

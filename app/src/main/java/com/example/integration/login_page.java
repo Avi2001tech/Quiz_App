@@ -26,7 +26,7 @@ public class login_page extends AppCompatActivity {
     private AppCompatButton button_home;
     private AppCompatButton button_signup;
     Dialog progressDialog;
-    TextView dialog_text;
+    TextView dialog_text,adminBtn;
     EditText email_login,password;
     private FirebaseAuth mAuth;
 
@@ -76,6 +76,15 @@ public class login_page extends AppCompatActivity {
             }
         });
 
+                      //Admin button
+        adminBtn=findViewById(R.id.adminBtn);
+        adminBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(login_page.this,AdminLogin.class);
+                startActivity(in);
+            }
+        });
 
     }
 

@@ -16,6 +16,12 @@
         android:theme="@style/Theme.Integration"
         tools:targetApi="31">
         <activity
+            android:name=".AdminLogin"
+            android:exported="false" />
+        <activity
+            android:name=".AdminSection"
+            android:exported="false" />
+        <activity
             android:name=".FinsihQuiz"
             android:exported="false">
             <meta-data

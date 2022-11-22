@@ -218,6 +218,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email-id"
+                android:clickable="false"
                 android:layout_marginBottom="10dp">
 
                 <EditText
@@ -227,6 +228,9 @@
                     android:drawableStart="@drawable/emails"
                     android:text="sample_email@gmail.com"
                     android:clickable="false"
+                    android:enabled="false"
+                    android:textStyle="italic"
+                    android:textColor="#000000"
                     android:background="@android:color/transparent"
                     android:drawablePadding="10dp"/>
             </com.google.android.material.textfield.TextInputLayout>
@@ -322,16 +326,15 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/update"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Update"
-                    android:background="@drawable/roundbutton"
-                    android:backgroundTint="#f5fcff"
-                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
-                    />
+                    android:background="@drawable/roundbutton"
+                    android:backgroundTint="#f5fcff"
+                    android:text="Update"
+                    android:textColor="@color/black" />
 
 
             </RelativeLayout>

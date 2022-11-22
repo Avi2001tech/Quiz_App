@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Questionfeed">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/questions"
+        android:layout_marginTop="15dp"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_button" />
+
+
+        <TextView
+            android:id="@+id/quiz_made_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remember , Slow but Steady (-_-)"
+            android:textStyle="italic"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/headline"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginBottom="25dp"
+            app:cardBackgroundColor="#dbf3fa"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question_1"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lay_question_1"
+                    android:background="@android:color/transparent"
+                    android:layout_marginBottom="15dp"
+                    style="@style/Widget.Design.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_question_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/question"
+                        android:drawablePadding="5dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:hint="Question panel :"
+                        android:fontFamily="@font/headline"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/question_1_pic"
+                        android:layout_width="250dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/upload_1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@android:color/transparent"
+                        android:drawableStart="@drawable/upload"
+                        android:paddingLeft="15dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/question_1_pic"
+                        app:layout_constraintEnd_toEndOf="@+id/question_1_pic"
+                        app:layout_constraintStart_toStartOf="@+id/question_1_pic"
+                        app:layout_constraintTop_toTopOf="@+id/question_1_pic"
+                        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                    <TextView
+                        android:layout_width="225dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/upload_image_if_necessary"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/question_1_pic"
+                        app:layout_constraintEnd_toEndOf="@+id/question_1_pic"
+                        app:layout_constraintStart_toStartOf="@+id/question_1_pic"
+                        app:layout_constraintTop_toBottomOf="@+id/upload_1"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lay_option_1_1"
+                    android:background="@drawable/option_rectangular"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/Widget.Design.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_option_1_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/one"
+                        android:drawablePadding="10dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:hint="Option 1"
+                        android:fontFamily="@font/headline"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lay_option_1_2"
+                    android:background="@drawable/option_rectangular"
+                    android:layout_marginBottom="5dp"
+                    style="@style/Widget.Design.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_option_1_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/two"
+                        android:drawablePadding="10dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:hint="Option 2"
+                        android:fontFamily="@font/headline"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lay_option_1_3"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/option_rectangular"
+                    style="@style/Widget.Design.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_option_1_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/three"
+                        android:drawablePadding="10dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:hint="Option 3"
+                        android:fontFamily="@font/headline"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lay_option_1_4"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/option_rectangular"
+                    style="@style/Widget.Design.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_option_1_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/four"
+                        android:drawablePadding="10dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:hint="Option 4"
+                        android:fontFamily="@font/headline"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lay_ans_1"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    style="@style/Widget.Design.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/text_ans_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                        android:hint="Type correct option"
+                        android:fontFamily="@font/headline"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I hereby admit the above data are true to my full knowledge and been verified too. "
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="italic"
+            android:padding="10dp"
+            android:id="@+id/TandC"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit and move to next question"
+            android:id="@+id/submit_quiz"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:textAllCaps="false"
+            android:elevation="10dp"
+            android:fontFamily="@font/headline"
+            android:background="@drawable/round"/>
+        
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/roundbutton"
+            android:backgroundTint="#f5fcff"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:text="End session"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
