@@ -347,16 +347,15 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sign_out"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sign Out"
-                    android:backgroundTint="#f5fcff"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
                     android:background="@drawable/roundbutton"
-                    android:textColor="@color/black"
-                    />
+                    android:backgroundTint="#f5fcff"
+                    android:text="Sign Out"
+                    android:textColor="@color/black" />
 
 
             </RelativeLayout>

@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class AdminLogin extends AppCompatActivity {
 
     private AppCompatButton button_adminPage;
-    private AppCompatButton button_signup;
+    /*private AppCompatButton button_signup;*/
     Dialog progressDialog;
     TextView dialog_text;
     EditText email_login,password;
@@ -62,14 +62,14 @@ public class AdminLogin extends AppCompatActivity {
         });
 
         // signup
-        button_signup = findViewById(R.id.sign_button);
+        /*button_signup = findViewById(R.id.sign_button);
         button_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(AdminLogin.this,sign_up.class);
                 startActivity(i);
             }
-        });
+        });*/
 
     }
 

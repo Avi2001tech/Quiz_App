@@ -109,8 +109,11 @@
                 android:text="Login"
                 android:fontFamily="@font/bungee"
                 android:textColor="@color/black" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
 
-            <androidx.appcompat.widget.AppCompatButton
+            <!--<androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/sign_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,7 +122,7 @@
                 android:layout_marginTop="0dp"
                 android:textSize="15sp"
                 android:text="New user ? Sign up"
-                android:textColor="@color/black" />
+                android:textColor="@color/black" />-->
 
 
 
